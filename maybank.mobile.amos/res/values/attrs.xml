@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FragmentAttributes">
+        <attr name="controllerClass" format="string" />
+        <attr name="title" format="string|string" />
+    </declare-styleable>
+    <declare-styleable name="NavigationFragmentAttributes">
+        <attr name="list" format="reference" />
+    </declare-styleable>
+</resources>

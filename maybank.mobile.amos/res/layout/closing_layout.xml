@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/master_body_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bacground1">
+
+    <RelativeLayout
+        android:id="@+id/master_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_header">
+
+        <TextView
+            android:id="@+id/closing_lbl_user_information"
+            style="@style/label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="@string/str_user_information">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/closing_lbl_currentdate"
+            style="@style/label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/closing_lbl_user_information"
+            android:gravity="right"
+            android:text="@string/str_date" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/prospek_dlg_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp"
+        android:layout_below="@+id/master_header_layout">
+
+        <LinearLayout
+            android:id="@+id/closing_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/content_parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_child_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/closing_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right">
+
+
+        <ImageView
+            android:id="@+id/closing_btn_back"
+            android:layout_height="38dp"
+            android:layout_width="80dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/str_back"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+</RelativeLayout>

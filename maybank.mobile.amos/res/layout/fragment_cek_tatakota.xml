@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+<LinearLayout
+        android:id="@+id/contentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:background="@drawable/img_background3">
+        	 <TextView
+                android:id="@+id/info_Nama_deb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="asasasas"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"/>
+		    <TextView
+                android:id="@+id/info_Nama_Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1" 
+                android:text="wewewewe"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_header_Info_Debitur"
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/INFODEB" />
+        </LinearLayout>
+
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_nama_deb"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/NAMADEB" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_nama_deb"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:enabled="false" />
+
+        </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_alamat_jaminan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/ALMDEB" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_alamat_jaminan"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:enabled="false" />
+
+        </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_sertifikatlain"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/SERTIFIKATLAIN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_sertifikatlain"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:enabled="false" />
+
+        </LinearLayout>
+        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_nodokumen"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/NODOC" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_nodokumen"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                 android:enabled="false" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_atasnama"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/AN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_atasnama"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                 android:enabled="false" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_header_data_laporan"
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/DTLAP" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_no_laporan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/NOLAP" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_no_laporan"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:enabled="false" />
+
+        </LinearLayout>
+               
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_tgl_laporan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/TGLLAP" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/cek_tatakota_lbl_tgl_laporan1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cek_tatakota_txt_tgl_laporan"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:enabled="false" />
+
+                <ImageView
+                    android:id="@+id/cek_tatakota_view_img_tgl_laporan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:src="@drawable/dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_tgl_pengecekan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/TGLCEK" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/cek_tatakota_linear_tgl_pengecekan1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cek_tatakota_txt_tgl_pengecekan"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:enabled="false" />
+
+                <ImageView
+                    android:id="@+id/cek_tatakota_view_img_pengecekan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:src="@drawable/dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_divisi"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/DIVBU" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_divisi"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                 android:enabled="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_segment"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/SEG" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_segment"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                 android:enabled="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_jns_penilaian"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/JNSPENILAIAN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_jns_penilaian"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                 android:enabled="false" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_header_Data_Jaminan"
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/DTTATAKOTA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_cara_pengecekan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CRCEK" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/cek_tatakota_spn_cara_pengecekan"
+                style="@style/spinner_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/NMPNL" />
+
+
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_kelurahan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/KEL" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_txt_nama_petugas"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50" />
+
+        </LinearLayout>
+ <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_header_hasil_pengecekan"
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/HASILCEK" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_kecamatan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/HASIL1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+			<LinearLayout
+                android:id="@+id/cek_tatakota_linear_cek_tatakota"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/cek_tatakota_rdogroup_cek_tatakota"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/TIDAK"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/cek_tatakota_rdo_wedening_tidak" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/YA"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/cek_tatakota_rdo_wedening_ya" />
+                </RadioGroup>
+            	<EditText
+	                android:id="@+id/cek_tatakota_txt_wedening"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="200" />
+
+			</LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_kota"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/HASIL2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+            <LinearLayout
+                android:id="@+id/cek_tatakota_linear_line"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/cek_tatakota_rdogroup_line"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/TIDAK"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/cek_tatakota_rdo_line_tidak" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/YA"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/cek_tatakota_rdo_line_ya" />
+                </RadioGroup>
+				<EditText
+	                android:id="@+id/cek_tatakota_txt_line2"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="200"/>
+				</LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_kodepos"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/HASIL3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            
+            <EditText
+                android:id="@+id/cek_tatakota_txt_peruntukan_objek"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/cek_tatakota_lbl_other_info"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/HASIL4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/cek_tatakota_other_info"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+			<Button
+                android:id="@+id/btn_savemesin"
+                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:background="@drawable/button_nav"
+	                 android:text="@string/str_save"
+	                 android:layout_gravity="center" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

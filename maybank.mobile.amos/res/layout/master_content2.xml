@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_bg_planning_pitch" />
+
+
+    <TextView
+        android:id="@+id/master_content_lbl_content_title"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/img_content_title_background_pitch"
+        android:gravity="left|center_vertical"
+        android:text="@string/str_title"
+        android:textColor="@color/planning_list_lbl_content_title"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/master_content_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/master_content_lbl_content_title"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"></RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/master_content_prg_loading"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:visibility="gone" />
+
+</RelativeLayout>

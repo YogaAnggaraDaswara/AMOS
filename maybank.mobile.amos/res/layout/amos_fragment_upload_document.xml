@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:baselineAligned="false"
+	    android:background="@color/color_white">
+        <LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent">
+				<ScrollView 
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:scrollbarStyle="insideInset"
+					android:fadeScrollbars="true"
+					android:scrollbarSize="10dip"
+					android:fitsSystemWindows="true" >
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent">
+			            <TextView
+			                android:id="@+id/lbl_tbl_amos"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:text="@string/lbl_doc_jaminan"
+			                style="@style/label_header" />
+							<HorizontalScrollView
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent"
+								android:scrollbarStyle="insideInset"
+								android:fadeScrollbars="true"
+								android:scrollbarSize="10dip"
+								android:fitsSystemWindows="true"   >
+								<LinearLayout
+									android:layout_width="fill_parent"
+									android:layout_height="fill_parent"
+									android:orientation="horizontal" >
+				            		<TableLayout
+						                android:layout_width="wrap_content"
+						    			android:layout_height="wrap_content"
+						    			android:scrollbarAlwaysDrawHorizontalTrack="true"
+						    			android:scrollbarAlwaysDrawVerticalTrack="true"
+						                android:id="@+id/amos_tableLayout_img"
+						                android:layout_weight="1"
+						                android:padding="5dp" />
+	        				</LinearLayout>
+						</HorizontalScrollView>
+					</LinearLayout>
+				</ScrollView>
+			</LinearLayout>
+    </RelativeLayout>
+    
+

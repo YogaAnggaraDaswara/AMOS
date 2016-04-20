@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:id="@+id/kenalan_dlg_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp">
+
+
+        <LinearLayout
+            android:id="@+id/contentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_koordinat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_prospek_koordinat"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_namausaha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_prospek_nama"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_alamatusaha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/form_prospek_alamat" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_jenisusaha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/form_prospek_jenisusaha" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/form_prospek_radius" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_komunitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/form_prospek_komunitas" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/form_prospek_image" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_totalrecords_value"
+                    style="@style/label_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    android:layout_gravity="right"
+                    android:visibility="invisible" />
+
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_koordinat_value"
+                    style="@style/label_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash" />
+
+
+                <EditText
+                    android:id="@+id/kenalan_view_txt_nama_value"
+                    style="@style/edittext_2"
+                    android:layout_width="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/kenalan_view_txt_alamat_value"
+                    style="@style/edittext_2"
+                    android:layout_width="match_parent"
+                    android:imeOptions="actionDone"
+                    android:layout_height="80dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine|textNoSuggestions" />
+
+
+                <com.mobile.framework.widget.ExSpinner
+                    android:id="@+id/kenalan_view_spn_jenis"
+                    style="@style/spinner_2"
+                    android:prompt="@string/form_prospek_jenisusaha" />
+
+                <com.mobile.framework.widget.ExSpinner
+                    android:id="@+id/kenalan_view_spn_radius"
+                    style="@style/spinner_2"
+                    android:prompt="@string/form_prospek_radius" />
+
+                <com.mobile.framework.widget.ExSpinner
+                    android:id="@+id/kenalan_view_spn_komunitas"
+                    style="@style/spinner_2"
+                    android:prompt="@string/form_prospek_komunitas" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/kenalan_view_img_01"
+                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/str_dash" />
+
+                    <TextView
+                        android:id="@+id/kenalan_view_lbl_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_dash"
+                        style="@style/label_1"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/kenalan_view_img_02"
+                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/str_dash" />
+
+                    <TextView
+                        android:id="@+id/kenalan_view_lbl_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_dash"
+                        style="@style/label_1"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/kenalan_view_img_03"
+                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/str_dash" />
+
+                    <TextView
+                        android:id="@+id/kenalan_view_lbl_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_dash"
+                        style="@style/label_1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/kenalan_dlg_content_container"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/kenalan_view_btn_first"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_first"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_prev"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_prev"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_next"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_next"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_last"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_last"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_save"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_save"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_add"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_new"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_delete"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_delete"
+            style="@style/button_text"
+            android:background="@color/color_red"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_takepicture"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_picture"
+            style="@style/button_text"
+            android:background="@color/color_blue"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/kenalan_view_btn_back"
+            android:layout_marginTop="2dp"
+            android:text="@string/str_back"
+            style="@style/button_text"
+            android:background="@color/color_black"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

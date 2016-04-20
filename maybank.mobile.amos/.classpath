@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.mobile.framework"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry excluding="com/mobile/app/activity/kenalan/|com/mobile/app/activity/blackbox/|com/mobile/app/activity/closing/|com/mobile/app/activity/pendekatan/|com/mobile/app/activity/prospek/|com/mobile/app/activity/tabungan/|com/mobile/app/activity/tagihan/|com/mobile/app/MyBroadcastReceiver.java|com/mobile/app/activity/cashcheckup/|com/mobile/app/activity/common/|com/mobile/app/activity/inbox/|com/mobile/app/activity/map/|com/mobile/app/activity/statistic/|com/mobile/app/activity/KenalanActivity.java|com/mobile/app/MainActivity1.java|com/mobile/appraisal/FragmentInquery.java|com/mobile/appraisal/RenderAlice.java|com/mobile/appraisal/ActionItems.java|com/mobile/appraisal/Fragment_Cek_Tata_Kota.java|com/mobile/appraisal/Fragment_Data_Kendaraan.java|com/mobile/appraisal/Fragment_Data_negative_Dialog.java|com/mobile/appraisal/Fragment_Data_Rumah_Tanah_Bangunan.java|com/mobile/appraisal/Fragment_Detail_IMB_Dialog.java|com/mobile/appraisal/Fragment_Detail.java|com/mobile/appraisal/Fragment_Dokumen_Jaminan_Dialog.java|com/mobile/appraisal/Fragment_Dokumen_Jaminan.java|com/mobile/appraisal/Fragment_History_Appraisal.java|com/mobile/appraisal/Fragment_History_WorkFlow.java|com/mobile/appraisal/Fragment_Inbox_Layout.java|com/mobile/appraisal/Fragment_Informasi_Jaminan.java|com/mobile/appraisal/Fragment_Inquery_Dialog.java|com/mobile/appraisal/Fragment_PB_Sampling_Dialog.java|com/mobile/appraisal/Fragment_Progress_Bangunan.java|com/mobile/appraisal/Fragment_Progress_Developer.java|com/mobile/appraisal/Fragment_RTB_Pembanding_Dialog.java|com/mobile/appraisal/Fragment_RTB_Pembanding.java|com/mobile/appraisal/Fragment_Valuation_Bangunan_Dialog.java|com/mobile/appraisal/Fragment_Valuation_Gudang.java|com/mobile/appraisal/Fragment_Valuation_Kendaraan.java|com/mobile/appraisal/Fragment_Valuation_Mesin.java|com/mobile/appraisal/Fragment_Valuation_Persediaan.java|com/mobile/appraisal/Fragment_Valuation_Rumah_Tanah_Bangunan.java|com/mobile/appraisal/Fragment_VHC_Pembanding_Dialog.java|com/mobile/appraisal/Fragment_VHC_Pembanding.java|com/mobile/appraisal/FragmentMain.java|com/mobile/appraisal/FragmentRadioButton.java|com/mobile/appraisal/FragmentTextView.java|com/mobile/appraisal/FragmentToggleButton.java|com/mobile/appraisal/FragmentWebView.java|com/mobile/appraisal/InboxActivity.java|com/mobile/appraisal/InqueryActivity.java|com/mobile/app/MainActivity.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.mobile.bo.app"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.mobile.database.app"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.mobile.services.app"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.3.4.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-cache-4.3.4.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="libs/httpmime-4.3.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Android Dependencies"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/master_login_body_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_backgroundLG"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/master_login_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/master_login_lbl_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/app_title"
+            android:textColor="@color/color_font_login"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/master_login_input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id="@+id/master_login_edt_user_name_value"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/str_username"
+            android:imeOptions="actionDone"
+            android:inputType="text">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/master_login_edt_password_value"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/master_login_edt_user_name_value"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/str_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"></EditText>
+
+
+        <TextView
+            android:id="@+id/master_login_lbl_user_name"
+            style="@style/label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/master_login_edt_user_name_value"
+            android:layout_alignTop="@id/master_login_edt_user_name_value"
+            android:gravity="center_vertical"
+            android:text="@string/str_username"
+            android:visibility="visible"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/master_login_lbl_password"
+            style="@style/label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/master_login_lbl_user_name"
+            android:gravity="center_vertical"
+            android:text="@string/str_password"
+            android:visibility="visible"
+            android:layout_marginLeft="5dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/master_login_lbl_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/master_login_btn_login"
+                android:text="@string/str_login"
+                style="@style/button_text"
+                android:layout_marginRight="5dp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@color/color_black" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

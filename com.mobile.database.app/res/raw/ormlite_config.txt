@@ -1,0 +1,734 @@
+#
+# generated on 2016/02/02 09:10:10
+#
+# --table-start--
+dataClass=com.mobile.database.app.entities.USER
+tableName=USER
+# --table-fields-start--
+# --field-start--
+fieldName=USERID
+dataPersister=STRING
+width=20
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=USER_PK
+# --field-end--
+# --field-start--
+fieldName=NAME
+dataPersister=STRING
+width=50
+# --field-end--
+# --field-start--
+fieldName=PASSWORD
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=POSITION
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=LOCATION
+dataPersister=STRING
+width=30
+# --field-end--
+# --field-start--
+fieldName=UNIT
+dataPersister=STRING
+width=30
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.ATTACHMENT
+tableName=ATTACHMENT
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+width=300
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=ATTACHMENT_PK
+# --field-end--
+# --field-start--
+fieldName=AP_REGNO
+dataPersister=STRING
+width=548
+# --field-end--
+# --field-start--
+fieldName=ATTACH_ID
+dataPersister=STRING
+width=549
+# --field-end--
+# --field-start--
+fieldName=ATTACH_SEQ
+dataPersister=STRING
+width=550
+# --field-end--
+# --field-start--
+fieldName=FILEFOLDER
+dataPersister=STRING
+width=551
+# --field-end--
+# --field-start--
+fieldName=FILENAME
+dataPersister=STRING
+width=552
+# --field-end--
+# --field-start--
+fieldName=FILETYPE
+dataPersister=STRING
+width=553
+# --field-end--
+# --field-start--
+fieldName=FILESIZE
+dataPersister=STRING
+width=554
+# --field-end--
+# --field-start--
+fieldName=UPLOADBY
+dataPersister=STRING
+width=555
+# --field-end--
+# --field-start--
+fieldName=UPLOADDATE
+dataPersister=STRING
+width=556
+# --field-end--
+# --field-start--
+fieldName=ATTACH_TYPE
+dataPersister=STRING
+width=557
+# --field-end--
+# --field-start--
+fieldName=ATTACH_TYPE_CODE
+dataPersister=STRING
+width=558
+# --field-end--
+# --field-start--
+fieldName=COL_ID
+dataPersister=STRING
+width=558
+# --field-end--
+# --field-start--
+fieldName=ISALREADYUPLOADEDTOSERVER
+dataPersister=STRING
+width=558
+# --field-end--
+# --field-start--
+fieldName=ISALREADYDOWNLOD
+dataPersister=STRING
+width=558
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.LOV
+tableName=LOV
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+width=20
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=LOV_PK
+# --field-end--
+# --field-start--
+fieldName=CODE
+dataPersister=STRING
+width=70
+# --field-end--
+# --field-start--
+fieldName=DESCRIPTION
+dataPersister=STRING
+width=40
+# --field-end--
+# --field-start--
+fieldName=GROUP
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=ORDERNUM
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=PARENT
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=PARENT_2
+dataPersister=STRING
+width=5
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.CONFIGSYNCHRONIZATION
+tableName=CONFIGSYNCHRONIZATION
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+width=10
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=CONFIGSYNCHRONIZATION_PK
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZELOV
+dataPersister=STRING
+width=15
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZETABUNGAN
+dataPersister=STRING
+width=15
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZETAGIHAN
+dataPersister=STRING
+width=15
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZEMESSAGE
+dataPersister=STRING
+width=15
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZENEWS
+dataPersister=STRING
+width=15
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZESCHEDULE
+dataPersister=STRING
+width=15
+# --field-end--
+# --field-start--
+fieldName=LASTSYNCHRONIZEBLACKBOX
+dataPersister=STRING
+width=15
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.ATTACHMENT_FILE
+tableName=ATTACHMENT_FILE
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+width=100
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=ATTACHMENT_FILE_PK
+# --field-end--
+# --field-start--
+fieldName=AP_REGNO
+dataPersister=STRING
+width=548
+# --field-end--
+# --field-start--
+fieldName=COL_ID
+dataPersister=STRING
+width=549
+# --field-end--
+# --field-start--
+fieldName=GENERATE_TYPE
+dataPersister=STRING
+width=550
+# --field-end--
+# --field-start--
+fieldName=GENERATE_TYPE_REFF
+dataPersister=STRING
+width=551
+# --field-end--
+# --field-start--
+fieldName=USERID
+dataPersister=STRING
+width=552
+# --field-end--
+# --field-start--
+fieldName=TOTAL_IMAGE
+dataPersister=STRING
+width=553
+# --field-end--
+# --field-start--
+fieldName=STATUS
+dataPersister=STRING
+width=554
+# --field-end--
+# --field-start--
+fieldName=FILENAME
+dataPersister=STRING
+width=555
+# --field-end--
+# --field-start--
+fieldName=ISDOWNLOAD
+dataPersister=STRING
+width=555
+# --field-end--
+# --field-start--
+fieldName=ISSTATUS
+dataPersister=STRING
+width=555
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.SCHEDULE
+tableName=SCHEDULE
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+width=20
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=SCHEDULE_PK
+# --field-end--
+# --field-start--
+fieldName=TYPE
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=INTERVAL
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=START
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=END
+dataPersister=STRING
+width=5
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.AMOS_EMAIL
+tableName=AMOS_EMAIL
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=AMOS_EMAIL_PK
+# --field-end--
+# --field-start--
+fieldName=AP_REGNO
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=TYPE
+dataPersister=STRING
+width=4
+# --field-end--
+# --field-start--
+fieldName=NAMADEBITUR
+dataPersister=STRING
+width=4
+# --field-end--
+# --field-start--
+fieldName=ISALREADYSUBMIT
+dataPersister=STRING
+width=558
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.AMOS_ENTRY_DEBITUR_INT
+tableName=AMOS_ENTRY_DEBITUR_INT
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+width=30
+canBeNull=false
+id=true
+uniqueIndexName=AMOS_ENTRY_DEBITUR_INT_PK
+# --field-end--
+# --field-start--
+fieldName=SEQ
+dataPersister=STRING
+width=4
+# --field-end--
+# --field-start--
+fieldName=AP_REGNO
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=USERID
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_FULLNM
+dataPersister=STRING
+width=100
+# --field-end--
+# --field-start--
+fieldName=CU_HPNO
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_EMAIL
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_KTPADDR1
+dataPersister=STRING
+width=200
+# --field-end--
+# --field-start--
+fieldName=CU_BORNDATE
+dataPersister=STRING
+width=8
+# --field-end--
+# --field-start--
+fieldName=CU_USIA_YY
+dataPersister=STRING
+width=6
+# --field-end--
+# --field-start--
+fieldName=CU_USIA_MM
+dataPersister=STRING
+width=6
+# --field-end--
+# --field-start--
+fieldName=CU_JOB_CODE
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=SP_FULLNM
+dataPersister=STRING
+width=100
+# --field-end--
+# --field-start--
+fieldName=SP_BORNDATE
+dataPersister=STRING
+width=8
+# --field-end--
+# --field-start--
+fieldName=CU_COMPNAME
+dataPersister=STRING
+width=100
+# --field-end--
+# --field-start--
+fieldName=CU_OFADDR1
+dataPersister=STRING
+width=200
+# --field-end--
+# --field-start--
+fieldName=CU_INCOMEMONTH
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=INCOME
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=OTHINSTALLMENT
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=PRODCATID
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=PRODUCTID
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=SUBPRODUCTID
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=COL_CODE
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=PR_ID
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=FINS_COMP
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=FINS_PLAN
+dataPersister=STRING
+width=50
+# --field-end--
+# --field-start--
+fieldName=LINS_COMP
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=LINS_PLAN
+dataPersister=STRING
+width=50
+# --field-end--
+# --field-start--
+fieldName=PURCHASE_PRICE
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=CP_DOWNPAYMENT_PCT
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=CP_INTEREST
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=CP_TENOR
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=COL_LUAS
+dataPersister=STRING
+width=8
+# --field-end--
+# --field-start--
+fieldName=COL_VALUE
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=CP_INSTALLMENT
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=CP_LTV
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=IIR_IDR
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=CP_LIMIT
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=PROVISION
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=ADMINFEE
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=LINS_PREMI
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=FINS_PREMI
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=NOTACHARGE
+dataPersister=STRING
+width=9
+# --field-end--
+# --field-start--
+fieldName=CH_CODE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=AP_CREATEDATE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=AP_DOCRECVDATE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=BOOKINGBRANCH
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=LINS_POLICYFEEFIRE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=FINS_POLICYFEELIFE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=PPHTFEE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_WORKSINCE_YY
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_ED_CODE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_COMPSCALE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_GENDER_CODE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=LP_CODE
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_WORKSINCE_YY_INT
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=CU_WORKSINCEM_MM_INT
+dataPersister=STRING
+width=20
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mobile.database.app.entities.AMOS_DOCUMENT_UPLOAD
+tableName=AMOS_DOCUMENT_UPLOAD
+# --table-fields-start--
+# --field-start--
+fieldName=ID
+dataPersister=STRING
+canBeNull=false
+id=true
+unique=true
+uniqueIndexName=APPR_DOKUMENT_PK
+# --field-end--
+# --field-start--
+fieldName=AP_REGNO
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=SEQ
+dataPersister=STRING
+width=4
+# --field-end--
+# --field-start--
+fieldName=USERID
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=DOC_CODE
+dataPersister=STRING
+width=50
+# --field-end--
+# --field-start--
+fieldName=DOC_NO
+dataPersister=STRING
+width=20
+# --field-end--
+# --field-start--
+fieldName=DOC_ORIG
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=DOC_AVAIL
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=DOC_VALID
+dataPersister=STRING
+width=5
+# --field-end--
+# --field-start--
+fieldName=DOC_RECVDATE
+dataPersister=STRING
+width=10
+# --field-end--
+# --field-start--
+fieldName=DOC_FILE_PATH
+dataPersister=STRING
+width=100
+# --field-end--
+# --field-start--
+fieldName=DOC_DESC
+dataPersister=STRING
+width=100
+# --field-end--
+# --field-start--
+fieldName=ISALREADYSUBMIT
+dataPersister=STRING
+width=558
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

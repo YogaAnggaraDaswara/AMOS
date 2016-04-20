@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="950dp"
+    android:baselineAligned="false"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:id="@+id/tagihan_dlg_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="850dp"
+        android:layout_alignParentTop="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/contentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_norekening"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_no" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_norekening_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_namadebitur"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_namadebitur" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_namadebitur_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_alamat"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_alamat" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_alamat_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="80dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_nomortabungan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_nomortabungan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_nomortabungan_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_jenistagihan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_jenistagihan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_jenistagihan_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_tenor"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_tenor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_tenor_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_tanggalcair"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_tanggalcair" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_tanggalcair_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_pokokpinjaman"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_pokokpinjaman" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_pokokpinjaman_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_bungapinjaman"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_bungapinjaman" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_bungapinjaman_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_totalpinjaman"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_totalpinjaman" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_totalpinjaman_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_totalcicilan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_totalcicilan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_totalcicilan_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_sisapinjaman"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_sisapinjaman" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_sisapinjaman_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_tagihan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_tagihan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_tagihan_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_sisatagihan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_sisatagihan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_sisatagihan_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_handphone"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_handphone" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_handphone_value1"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_pembayaran"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_tagihan_pembayaran" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_pembayaran_value1"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_bacground2"
+                android:layout_margin="0.01dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tagihan_view_lbl_pin"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_rekening_pin" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tagihan_view_txt_pin_value"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:visibility="visible"
+                    android:enabled="false" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tagihan_dlg_content_container"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp">
+
+        <Button
+            android:id="@+id/tagihan_view_btn_close"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_tutup"
+            style="@style/button_text"
+            android:background="@color/color_red"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <Button
+            android:id="@+id/tagihan_view_btn_requestpin"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_requestpin"
+            style="@style/button_text"
+            android:background="@color/color_blue_dark"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/tagihan_view_btn_sendtransaction"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_sendtransaction"
+            style="@style/button_text"
+            android:background="@color/color_blue_dark"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

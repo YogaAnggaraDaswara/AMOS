@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+	<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideInset"
+	android:fadeScrollbars="true"
+	android:scrollbarSize="10dip"
+	android:fitsSystemWindows="true" >
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+	      
+	<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_item"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/ITEM" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	            <EditText
+	                android:id="@+id/val_vhc_txt_id"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:visibility="gone" />
+	            <EditText
+	                android:id="@+id/val_vhc_txt_seq"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:visibility="gone" />
+	 			<EditText
+	                android:id="@+id/val_vhc_txt_item"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="50" />
+	          
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_ketersediaan"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/SEDIA" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<CheckBox
+	                android:id="@+id/val_vhc_chk_ketersediaan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"/>
+	            
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_satuan"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/SATUAN" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<EditText
+	                android:id="@+id/val_vhc_txt_satuan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="20" />
+	          
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_luas_tanah"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/KET" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	          <EditText
+	                android:id="@+id/val_vhc_txt_Keterangan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="50" />
+	        </LinearLayout>
+			
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	 			<Button
+	                 android:id="@+id/btn_save"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:background="@drawable/button_nav"
+	                 android:text="@string/str_save" />
+	        </LinearLayout>
+		</LinearLayout>
+		</ScrollView>
+
+</RelativeLayout>

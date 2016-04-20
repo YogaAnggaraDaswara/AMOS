@@ -1,0 +1,158 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ * http://www.androidhive.info/2012/01/android-json-parsing-tutorial/
+ * http://www.learn2crack.com/2013/10/android-json-parsing-url-example.html
+ * http://www.json-generator.com/
+ */
+
+package com.mobile.services.app.services;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpVersion;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.params.HttpProtocolParams;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+import com.mobile.framework.common.FileUtility;
+import com.mobile.framework.common.MultipartEntity;
+import android.os.Environment;
+import android.util.Log;
+/**
+ *
+ * @author hhartoko
+ */
+public class JSONServiceHandler {
+    private static String response = null;
+//    public String url = "http://www.json-generator.com/api/json/get/bOFfxdxVMy";
+//    public String url = "http://111.67.78.75/biimobile2/contract";
+
+/*  public final static String URLDOWNLOADIMAGESERVER = "http://192.168.43.203/mobile/Contract/";
+  public String url = "http://192.168.43.203/mobile/contract";*/
+    
+    
+//    public final static String URLDOWNLOADIMAGESERVER = "http://192.168.43.215/biimobilesme/Contract/";
+//    public String url = "http://192.168.43.215/biimobilesme/Contract";
+    
+//  public final static String URLDOWNLOADIMAGESERVER = "http://192.168.1.141/biimobilesme/Contract/";
+//  public String url = "http://192.168.1.141/biimobilesme/Contract";
+    
+    public final static String URLDOWNLOADIMAGESERVER = "http://10.225.16.30/biimobileamos/Contract/";
+    public String url = "http://10.225.16.30/biimobileamos/Contract";
+    
+//    public final static String URLDOWNLOADIMAGESERVER = "http://10.225.16.143/biimobileamos/Contract/";
+//    public String url = "http://10.225.16.143/biimobileamos/Contract";
+    
+    /*public final static String URLDOWNLOADIMAGESERVER = "http://172.17.23.60/biimobile2/Contract/";
+    public String url = "http://172.17.23.60/biimobile2/Contract";*/
+    
+    private  DefaultHttpClient httpClient;
+    private HttpEntity httpEntity;
+    private HttpResponse httpResponse;
+    private static final int MAX_CONNECTION_TIMEOUT = 30000;
+	public final static String FILEPATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/AMOS/IMAGES/";
+	private static final String TAG = "upload";
+   
+    public JSONServiceHandler(){
+    }
+    
+    public void SetHTTPClient(){
+       // http client
+       httpClient = new DefaultHttpClient();
+       HttpParams httpParams= httpClient.getParams();
+       HttpProtocolParams.setVersion(httpParams, HttpVersion.HTTP_1_1);
+       HttpConnectionParams.setConnectionTimeout(httpParams, MAX_CONNECTION_TIMEOUT);
+       HttpConnectionParams.setSoTimeout(httpParams,MAX_CONNECTION_TIMEOUT);
+               
+       httpEntity = null;
+       httpResponse = null;
+    }
+    public JSONObject JSONServicePostData(String action,String param)throws Exception {
+
+        this.SetHTTPClient();
+        HttpPost httpPost = new HttpPost(url+"/"+action);
+        // adding post params
+        if (!param.equalsIgnoreCase("")) {
+           StringEntity se = new StringEntity(param,"UTF-8");
+           se.setContentEncoding("UTF-8");
+           httpPost.setEntity(se);
+         }
+        
+         httpPost.setHeader("Accept", "application/json");
+         httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
+         httpResponse = httpClient.execute(httpPost);
+         httpEntity = httpResponse.getEntity();
+         response = EntityUtils.toString(httpEntity);
+
+        return new JSONObject(response);
+    
+    }
+    
+    public JSONObject JSONServiceGetData(String action,List<NameValuePair> params) throws Exception {
+    	this.SetHTTPClient();
+        // appending params to url
+        url += "/"+action;
+        if (params != null) {
+            String paramString = URLEncodedUtils.format(params, "utf-8");
+            url += "?" + paramString;
+        }
+        HttpGet httpGet = new HttpGet(url);
+        try{
+        
+        httpResponse = httpClient.execute(httpGet);
+        httpEntity = httpResponse.getEntity();
+        response = EntityUtils.toString(httpEntity);
+        }
+    	finally {
+    		httpGet.abort();
+    	}
+        return new JSONObject(response);
+    	
+    }
+    public JSONObject JSONServiceUploadPhoto(String action,List<NameValuePair> params,String filename) throws Exception {
+    	 this.SetHTTPClient();
+    	 // convert image to input stream
+    	 InputStream in = new ByteArrayInputStream(FileUtility.convertFileToByteArray(filename, FILEPATH));
+		 MultipartEntity reqEntity = new MultipartEntity();
+		 reqEntity.addPart("file",filename + ".jpg", in);
+
+    	 // appending params to url
+         url += "/"+action+"/";
+         if (params != null) {
+             String paramString = URLEncodedUtils.format(params, "utf-8");
+             url += "?" + paramString;
+         }
+         
+         HttpPost httpPost = new HttpPost(url);
+         httpPost.setEntity(reqEntity);
+         
+		 Log.i(TAG, "request " + httpPost.getRequestLine());
+         
+		 httpResponse = httpClient.execute(httpPost);
+         
+         if (httpResponse != null){
+        	 Log.i(TAG, "response " + httpResponse.getStatusLine().toString());
+         	 httpEntity = httpResponse.getEntity();
+             response = EntityUtils.toString(httpEntity);
+		} 
+         
+         if (in != null) {
+			try {in.close();} catch (IOException e) {e.printStackTrace();}
+		}
+
+         return new JSONObject(response);
+    }
+}

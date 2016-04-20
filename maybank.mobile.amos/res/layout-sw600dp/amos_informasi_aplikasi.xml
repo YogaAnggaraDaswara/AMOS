@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@color/color_amos_bg">
+        
+	<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:fitsSystemWindows="true"
+        android:scrollbarSize="10dip"
+        android:scrollbarStyle="insideInset" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/head_ams_debitur"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/str_apk_information"
+	                style="@style/label_header" />
+        	</LinearLayout>
+        	
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/search_ams_no_aplikasi"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/INQUERY1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_txt_no_aplikasi"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/search_ams_lbl_nmdeb"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_namadebitur" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_txt_nama"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_tgllhr_deb"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FTGLLAHIRDEB" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <LinearLayout
+	                android:id="@+id/val_ams_linear_tgllhr_deb"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_txt_tgl_lhr"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/view_img_calender"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	            </LinearLayout>
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_input"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FINPUTTGL" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <LinearLayout
+	                android:id="@+id/val_ams_linear_input"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_txt_tgl_input"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/view_img_calender_inp"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	            </LinearLayout>
+
+            </LinearLayout>
+            
+			<LinearLayout
+		        android:id="@+id/search_layout_action"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="left"
+		        android:orientation="horizontal"
+		        android:layout_below="@+id/contentlayout"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginBottom="20dp">
+	
+				<Button
+				    android:id="@+id/btn_cari"
+				    style="@style/button_text"
+				    android:layout_width="90dp"
+				    android:layout_height="40dp"
+				    android:layout_marginTop="2dp"
+				    android:background="@color/color_blue_dark"
+				    android:enabled="true"
+				    android:text="@string/str_search"
+				    android:visibility="gone" />
+				
+				<Button
+		            android:id="@+id/btn_clear"
+		            style="@style/button_text"
+		            android:background="@color/color_red"
+		            android:layout_gravity="center"
+		            android:layout_width="90dp"
+		            android:layout_height="40dp"
+		            android:enabled="true"
+		            android:text="@string/str_clear"
+		            android:visibility="gone" />
+	
+	    	</LinearLayout>
+	    	
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent">
+				<ScrollView 
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:scrollbarStyle="insideInset"
+					android:fadeScrollbars="true"
+					android:scrollbarSize="10dip"
+					android:fitsSystemWindows="true" >
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent">
+			            <TextView
+			                android:id="@+id/lbl_tbl_amos"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:text="@string/FHASILCARI"
+			                style="@style/label_header" />
+							<HorizontalScrollView
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent"
+								android:scrollbarStyle="insideInset"
+								android:fadeScrollbars="true"
+								android:scrollbarSize="10dip"
+								android:fitsSystemWindows="true"   >
+								<LinearLayout
+									android:layout_width="fill_parent"
+									android:layout_height="fill_parent"
+									android:orientation="vertical" >
+				            		<TableLayout
+						                android:layout_width="wrap_content"
+						    			android:layout_height="wrap_content"
+						    			android:scrollbarAlwaysDrawHorizontalTrack="true"
+						    			android:scrollbarAlwaysDrawVerticalTrack="true"
+						                android:id="@+id/amos_tableLayout"
+						                android:layout_weight="1"
+						                android:padding="5dp" />
+					            		<LinearLayout
+							                android:id="@+id/buttonLayout"
+							                android:layout_width="match_parent"
+							                android:layout_height="wrap_content"
+							                android:baselineAligned="false"
+							                android:orientation="horizontal"
+							                android:background="@color/color_button_navi"
+							                android:layout_gravity="right"
+							                android:layout_margin="10dp"
+							                android:padding="5dp">
+							
+							                <TextView
+							                    android:id="@+id/txtPageno"
+							                    android:layout_width="0dp"
+							                    android:layout_weight="0.05"
+							                    android:layout_height="wrap_content"
+							                    style="@style/label_1"
+							                    android:textColor="@android:color/black" />
+							
+							                <Button
+							                    android:id="@+id/btn_first"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_first"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+							
+							                <Button
+							                    android:id="@+id/btn_prev"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_prev"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+							
+							                <Button
+							                    android:id="@+id/btn_next"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_next"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+							
+							                <Button
+							                    android:id="@+id/btn_last"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_last"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+						            	</LinearLayout>
+						            	
+	        				</LinearLayout>
+						</HorizontalScrollView>
+					</LinearLayout>
+				</ScrollView>
+			</LinearLayout>
+			
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent">
+				<ScrollView 
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:scrollbarStyle="insideInset"
+					android:fadeScrollbars="true"
+					android:scrollbarSize="10dip"
+					android:fitsSystemWindows="true" >
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent">
+			            <TextView
+			                android:id="@+id/lbl_tbl_amos_dtl"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:text="@string/FINFODOC"
+			                style="@style/label_header" />
+							<HorizontalScrollView
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent"
+								android:scrollbarStyle="insideInset"
+								android:fadeScrollbars="true"
+								android:scrollbarSize="10dip"
+								android:fitsSystemWindows="true"   >
+								<LinearLayout
+									android:layout_width="fill_parent"
+									android:layout_height="fill_parent"
+									android:orientation="vertical" >
+				            		<TableLayout
+						                android:layout_width="wrap_content"
+						    			android:layout_height="wrap_content"
+						    			android:scrollbarAlwaysDrawHorizontalTrack="true"
+						    			android:scrollbarAlwaysDrawVerticalTrack="true"
+						                android:id="@+id/amos_tableLayout_dtl"
+						                android:layout_weight="1"
+						                android:padding="5dp" />
+					            		<LinearLayout
+							                android:id="@+id/buttonLayout_dtl"
+							                android:layout_width="match_parent"
+							                android:layout_height="wrap_content"
+							                android:baselineAligned="false"
+							                android:orientation="horizontal"
+							                android:background="@color/color_button_navi"
+							                android:layout_gravity="right"
+							                android:layout_margin="10dp"
+							                android:padding="5dp">
+							
+							                <TextView
+							                    android:id="@+id/txtPageno_dtl"
+							                    android:layout_width="0dp"
+							                    android:layout_weight="0.05"
+							                    android:layout_height="wrap_content"
+							                    style="@style/label_1"
+							                    android:textColor="@android:color/black" />
+							
+							                <Button
+							                    android:id="@+id/btn_first_dtl"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_first"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+							
+							                <Button
+							                    android:id="@+id/btn_prev_dtl"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_prev"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+							
+							                <Button
+							                    android:id="@+id/btn_next_dtl"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_next"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+							
+							                <Button
+							                    android:id="@+id/btn_last_dtl"
+							                    android:layout_marginTop="2dp"
+							                    style="@style/button_text"
+							                    android:background="@drawable/button_last"
+							                    android:layout_gravity="center"
+							                    android:layout_width="45dp"
+							                    android:layout_height="45dp"
+							                    android:enabled="true"
+							                    android:layout_margin="2dp"
+							                    android:visibility="visible" />
+						            	</LinearLayout>
+						            	
+	        				</LinearLayout>
+						</HorizontalScrollView>
+					</LinearLayout>
+				</ScrollView>
+			</LinearLayout>
+			
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

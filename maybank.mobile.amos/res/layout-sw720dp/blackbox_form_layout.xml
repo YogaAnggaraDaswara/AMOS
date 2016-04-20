@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="@color/color_bacground2">
+
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:background="@color/color_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_marginTop="0.4dp"
+            android:layout_margin="0.01dp"
+
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_totalrecords_value"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash"
+                android:gravity="right"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_koordinat"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_koordinat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/prospek_view_linearlayout_gps"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/prospek_view_lbl_koordinat_value"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash" />
+
+                <ProgressBar
+                    android:id="@+id/prospek_view_progressbar_taglokasi"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:indeterminateBehavior="repeat"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/prospek_view_img_taglokasi"
+                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/location"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_namausaha"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_nama" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_nama_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_nama_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_alamatusaha"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_alamat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_alamat_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:layout_height="80dp"
+                android:ems="10"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_alamat_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_jenisusaha"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_jenisusaha" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:id="@+id/prospek_view_spn_jenis"
+                style="@style/spinner_2"
+                android:prompt="@string/form_prospek_jenisusaha"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_spn_jenis"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_radius"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_radius" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:id="@+id/prospek_view_spn_radius"
+                style="@style/spinner_2"
+                android:prompt="@string/form_prospek_radius"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_spn_radius"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_kominitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_komunitas"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_komunitas" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:id="@+id/prospek_view_spn_komunitas"
+                style="@style/spinner_2"
+                android:prompt="@string/form_prospek_komunitas"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_spn_komunitas"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_namadebitur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_namadebitur"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_namadebitur" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_namadebitur_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_namadebitur_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_tgllahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_tglahir"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_tgllahir" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/prospek_view_linearlayout_tgllahir"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/prospek_view_txt_tgllahir_value"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:enabled="false" />
+
+                <ImageView
+                    android:id="@+id/prospek_view_img_tgllahir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:src="@drawable/dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_tgllahir_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_handphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_handphone"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_handphone" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/prospek_view_linearlayout_handphone"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/prospek_view_txt_handphone_value"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/prospek_view_img_handphone_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/phone" />
+
+                <ImageView
+                    android:id="@+id/prospek_view_img_handphone_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/newmessage" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_handphone_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_telponrumah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_teleponrumah"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_telprumah" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/prospek_view_linearlayout_teleponrumah"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/prospek_view_txt_teleponrumah_value"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/prospek_view_img_teleponrumah_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/phone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_teleponrumah_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_alamatrumah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_alamatrumah"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_alamatrumah" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_alamatrumah_value"
+                style="@style/edittext_2"
+                android:imeOptions="actionDone"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="80dp"
+                android:ems="10"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_alamatrumah_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_pembiayaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_pembiayaan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_pembiayaan" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/prospek_view_spn_pembiayaan"
+                style="@style/spinner_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/form_prospek_pembiayaan"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_pembiayaan_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_plafond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_plafon"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_plafond" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_plafon_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_plafon_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_ktp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_ktp"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_ktp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_ktp_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_ktp_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_npwp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_npwp"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_npwp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_npwp_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_npwp_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_siup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_siupsku"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_siupsku" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/prospek_view_txt_siupsku_value"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_siupsku_value"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/str_dash" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prospek_Li_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_bacground2"
+            android:layout_margin="0.01dp">
+
+            <TextView
+                android:id="@+id/prospek_view_lbl_picture"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/form_prospek_image" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/prospek_view_linearlayout_photo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <com.mobile.framework.widget.TextProgressBar
+                    android:id="@+id/prospek_prg_loading_indicator"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:maxHeight="30dp"
+                    android:minHeight="30dp"
+                    android:progress="70"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/kenalan_view_img_01"
+                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/str_dash" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/kenalan_view_img_02"
+                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/str_dash" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/kenalan_view_img_03"
+                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/str_dash" />
+
+                <TextView
+                    android:id="@+id/kenalan_view_lbl_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/prospek_view_linearlayout_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/contentlayout"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+
+        <Button
+            android:id="@+id/prospek_view_btn_first"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_first"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_prev"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_prev"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_next"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_next"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_last"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_last"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_delete"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_del"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_save"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_savelc"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_add"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_add"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_takepicture"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_foto"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_search"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_find"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/prospek_view_btn_submit"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_save"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_blackbox"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_black"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/prospek_view_btn_back"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_back"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

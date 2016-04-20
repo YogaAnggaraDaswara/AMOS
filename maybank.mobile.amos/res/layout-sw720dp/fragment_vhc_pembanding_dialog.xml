@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+	<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideInset"
+	android:fadeScrollbars="true"
+	android:scrollbarSize="10dip"
+	android:fitsSystemWindows="true" >
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+	      
+	<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_lokasi"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/MERK" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<EditText
+	                android:id="@+id/val_vhc_txt_merek"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="100" />
+	          
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_merk"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/MODEL" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<EditText
+	                android:id="@+id/val_vhc_txt_seq"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:visibility="gone"/>
+	            <EditText
+	                android:id="@+id/val_vhc_txt_model"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="100"/>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_lokasi1"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/WARNA" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<EditText
+	                android:id="@+id/val_vhc_txt_warna"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="50" />
+	          
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_luas_tanah"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/TAHUN" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	          <EditText
+	                android:id="@+id/val_vhc_txt_tahun"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="5" />
+	        </LinearLayout>
+			 <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_luas_bangunan"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/TRANSMISION" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+	  		   <com.mobile.framework.widget.ExSpinner
+	  		       android:id="@+id/val_vhc_spn_transmisi"
+	  		       style="@style/spinner_3"
+	  		       android:layout_width="0dp"
+	  		       android:layout_height="wrap_content"
+	  		       android:layout_weight="0.6"
+	  		       android:prompt="@string/LAND_SHAPE" />
+	            
+	        </LinearLayout>
+	
+	       <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_kondisi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMKONDISI" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	          <com.mobile.framework.widget.ExSpinner
+	              android:id="@+id/val_vhc_spn_kondisi"
+	              style="@style/spinner_3"
+	              android:layout_width="0dp"
+	              android:layout_height="wrap_content"
+	              android:layout_weight="0.6"
+	              android:prompt="@string/LAND_SHAPE" />
+	
+	        </LinearLayout>
+			<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.7dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_penawaran"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="50dp"
+	                style="@style/label_1"
+	                android:text="@string/PEMPENAWARAN" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_vhc_spn_penawaran"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:prompt="@string/LAND_SHAPE" />
+	
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.7dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_harga_penawaran"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                 android:layout_height="70dp"
+	                style="@style/label_1"
+	                android:text="@string/PEMHARGA" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/val_vhc_txt_harga_penawaran"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:maxLength="20" />
+	
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.7dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_adjusment"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                 android:layout_height="70dp"
+	                style="@style/label_1"
+	                android:text="@string/PEMADJUSMENT" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/val_vhc_txt_adjusment"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:maxLength="20" />
+	
+	
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_nara_sumber"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMNARASUMBER" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+				<EditText
+	                android:id="@+id/val_vhc_txt_nara_sumber"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="100" />
+	        </LinearLayout>
+			<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_vhc_lbl_no_telp"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMTELP" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+				<EditText
+	                android:id="@+id/val_vhc_txt_no_telp"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:maxLength="50"/>
+	         
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	 			<Button
+	                 android:id="@+id/btn_save"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:background="@drawable/button_nav"
+	                 android:text="@string/str_save"
+	                 android:layout_gravity="center_horizontal" />
+	        </LinearLayout>
+		</LinearLayout>
+		</ScrollView>
+
+</RelativeLayout>

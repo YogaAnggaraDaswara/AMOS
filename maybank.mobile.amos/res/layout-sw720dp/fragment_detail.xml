@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+	<LinearLayout
+        android:id="@+id/contentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:background="@drawable/img_background3">
+        	 <TextView
+                android:id="@+id/info_Nama_deb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"/>
+		    <TextView
+                android:id="@+id/info_Nama_Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1" 
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/val_rtb_header_Data_Laporan"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/TNH" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_no_laporan"
+                style="@style/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:text="@string/ANSET" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_an_sertifikat"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_tgl_laporan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/NOSET" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+ 			<EditText
+                android:id="@+id/val_rtb_txt_no_sertifikat"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+          
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_tgl_survey"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/JNSSET" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_jns_sertifikat"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/NMPNL" />
+
+        </LinearLayout>
+		 <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_tgl_expire"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/TGLJTH" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/val_rtb_linear_tgl_expire1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/val_rtb_txt_tgl_expire"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:enabled="false" />
+
+                <ImageView
+                    android:id="@+id/val_rtb_view_img_tgl_tgl_expire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:src="@drawable/dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+		 <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/val_rtb_header_detail_dok_lainnya"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/OTHERDOC" />
+
+        </LinearLayout>
+		 <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="1dp"
+		            android:padding="1dp">
+            		
+					<ScrollView 
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:scrollbarStyle="insideInset"
+					android:fadeScrollbars="true"
+					android:scrollbarSize="10dip"
+					android:fitsSystemWindows="true" >
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent">
+								<HorizontalScrollView
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent"
+								android:scrollbarStyle="insideInset"
+								android:fadeScrollbars="true"
+								android:scrollbarSize="10dip"
+								android:fitsSystemWindows="true"   >
+									<LinearLayout
+									android:layout_width="fill_parent"
+									android:layout_height="fill_parent"
+									android:orientation="horizontal" >
+										<TableLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:scrollbarAlwaysDrawHorizontalTrack="true"
+											android:scrollbarAlwaysDrawVerticalTrack="true"
+											android:id="@+id/dok_tableLayout"
+											android:layout_weight="1"
+											android:padding="5dp" />
+		
+								
+									</LinearLayout>
+								</HorizontalScrollView>
+						</LinearLayout>
+					</ScrollView>
+		</LinearLayout>
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_land_area"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/LAND_AREA" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_land_area"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_batas_utara"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/NORTH_BOUNDARY" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_north_boundary"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_batas_selatan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/SOUTH_BOUNDARY" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_south_boundary"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_batas_timur"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/EAST_BOUNDARY" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_east_boundary"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_batas_barat"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/WEST_BOUNDARY" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+			<EditText
+                android:id="@+id/val_rtb_txt_west_boundary"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_land_shape"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/LAND_SHAPE" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_land_shape"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/LAND_SHAPE" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_land_contour"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/LAND_CONTOUR" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_land_contour"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/LAND_CONTOUR" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_land_purpose"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/LAND_PURPOSE" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_land_purpose"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/LAND_PURPOSE" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_land_range1"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/RANGE_WIDTH1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+ 		<LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_followup">
+             
+			<EditText
+			    android:id="@+id/val_rtb_txt_land_range"
+			    style="@style/edittext_2"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:imeOptions="actionDone"
+			   android:inputType="number"  />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_land_range"
+                style="@style/spinner_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/RD" />
+           
+ 			<TextView
+			     android:id="@+id/val_rtb_lbl_land_range2"
+			     style="@style/label_1"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:text="@string/RANGE_WIDTH2" />
+
+		</LinearLayout>
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/val_rtb_header_detail_bangunan"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/DTLBANGUNAN" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_building_type"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/BUILDING_TYPE" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_building_type"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/BUILDING_TYPE" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_building_condotion"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/BUILDING_CONDITION" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_building_condotion"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/BUILDING_CONDITION" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_building_area"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/BUILDING_AREA" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_building_area"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+
+        </LinearLayout>
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_tahun"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_TAHUN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_const_tahun"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/val_rtb_header_detail_imb"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/IMB" />
+			 <Button
+                 android:id="@+id/btn_new"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/button_add" />
+        </LinearLayout>
+        
+		
+		<LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="1dp"
+		            android:padding="1dp">
+            		
+					<ScrollView 
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:scrollbarStyle="insideInset"
+					android:fadeScrollbars="true"
+					android:scrollbarSize="10dip"
+					android:fitsSystemWindows="true" >
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent">
+								<HorizontalScrollView
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent"
+								android:scrollbarStyle="insideInset"
+								android:fadeScrollbars="true"
+								android:scrollbarSize="10dip"
+								android:fitsSystemWindows="true"   >
+									<LinearLayout
+									android:layout_width="fill_parent"
+									android:layout_height="fill_parent"
+									android:orientation="horizontal" >
+										<TableLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:scrollbarAlwaysDrawHorizontalTrack="true"
+											android:scrollbarAlwaysDrawVerticalTrack="true"
+											android:id="@+id/inbox_tableLayout"
+											android:layout_weight="1"
+											android:padding="5dp" />
+		
+								
+									</LinearLayout>
+								</HorizontalScrollView>
+						</LinearLayout>
+					</ScrollView>
+		</LinearLayout>
+		 <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_purpose_not_imb"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="80dp"
+                style="@style/label_1"
+                android:text="@string/PURPOSE_NOT_IMB" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_purpose_not_imb"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/val_rtb_header_detail_konstruksi"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/KONSTRUKSI" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_progress"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_PROGRESS" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_const_progress"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="number" >
+					
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_lantai"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_LANTAI" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_const_lantai"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_inti"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_INTI" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_const_inti"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:prompt="@string/CONST_INTI" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_floor"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_FLOOR" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_const_floor"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/CONST_FLOOR" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_wall"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_WALL" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_const_wall"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/CONST_WALL" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_ceiling"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_CEILING" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_const_ceiling"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/CONST_CEILING" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_const_roof"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/CONST_ROOF" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_const_roof"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/CONST_ROOF" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/val_rtb_header_fasilitas_umum"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/FU" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_avail_pln"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/AVAIL_PLN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_avail_pln"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_avail_genset"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/AVAIL_GENSET" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/val_rtb_txt_avail_genset"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+
+        </LinearLayout>
+		
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_air"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/SEG" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/val_rtb_linear_air1"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/val_rtb_rdogroup_air"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/AVAIL_AIRA"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/val_rtb_rdo_air_ada" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/AVAIL_AIRTDK"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/val_rtb_rdo_air_tidak" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+		
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_avail_pdam"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/AVAIL_PDAM" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_avail_pdam"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/AVAIL_PDAM" />
+
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/val_rtb_lbl_avail_phone"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/AVAIL_PHONE" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <com.mobile.framework.widget.ExSpinner
+                android:id="@+id/val_rtb_spn_avail_phone"
+                style="@style/spinner_3"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:prompt="@string/AVAIL_PHONE" />
+
+        </LinearLayout>
+        
+ 		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp"
+            android:layout_gravity="center_horizontal">
+
+			<Button
+                android:id="@+id/btn_savedetail"
+                android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:background="@drawable/button_nav"
+	                 android:text="@string/str_save"
+	                 android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

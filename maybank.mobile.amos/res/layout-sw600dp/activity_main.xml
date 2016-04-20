@@ -1,0 +1,100 @@
+<layout.MainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- This holds our menu -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/activity_main_menu_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffd102"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="1dp"></ListView>
+
+        <TabWidget
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></TabWidget>
+    </LinearLayout>
+
+    <!-- This holds our content -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_backgroundLG">
+
+        <!-- This acts as Actionbar -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75px"
+            android:background="@color/color_backgroundLG"
+            android:orientation="horizontal"
+            android:layout_margin="5px">
+
+            <Button
+                android:id="@+id/activity_main_content_button_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_drawer"
+                android:onClick="toggleMenu" 
+                android:layout_marginLeft="20px"/>
+
+            <TextView
+                android:id="@+id/activity_main_content_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/label_1"
+                android:text="@string/app_name" />
+ 			
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75px"
+            android:background="@color/color_backgroundLG"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_margin="5px">
+         <Button
+                 android:id="@+id/btn_batal"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/button_nav"
+                 android:text="@string/str_batal" />
+             <Button
+                 android:id="@+id/btn_save"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/button_nav"
+                 android:text="@string/str_save" />
+         </LinearLayout>
+        <!-- This is where fragment will show up -->
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_followup">
+
+            <FrameLayout
+                android:id="@+id/activity_main_content_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout.MainLayout>

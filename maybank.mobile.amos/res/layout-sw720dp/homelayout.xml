@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/master_body_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_amos_bg">
+
+    <RelativeLayout
+        android:id="@+id/master_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_header"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/master_lbl_user_information"
+            style="@style/label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="@string/str_user_information">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/master_lbl_currentdate"
+            style="@style/label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/master_lbl_user_information"
+            android:gravity="right"
+            android:text="@string/str_date" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/master_navigation_layout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/master_header_layout"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    
+	<RelativeLayout
+	        android:id="@+id/master_footer_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_above="@+id/master_navigation_layout"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true">
+	</RelativeLayout>
+</RelativeLayout>

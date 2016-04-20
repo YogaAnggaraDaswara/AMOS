@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@color/color_bacground2">
+
+    <ScrollView
+        android:id="@+id/blackbox_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/blackbox_lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_blackbox_result"
+                style="@style/label_header" />
+
+            <TableLayout
+                android:id="@+id/blackbox_tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/blackbox_content_container"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+
+        <Button
+            android:id="@+id/blackbox_view_btn_request"
+            android:layout_marginTop="2dp"
+            android:text="@string/str_save"
+            style="@style/button_text_navigator"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

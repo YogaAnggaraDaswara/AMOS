@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_items">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Valuation</item>
+        <item>Data</item>
+        <item>Detail</item>
+        <item>Data Pembanding</item>
+        <item>Cek Tata Kota</item>
+        <item>Progress Bangunan</item>
+        <item>Progress Developer</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+    
+    <string-array name="menu_items_rtb">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Valuation</item>
+        <item>Data</item>
+        <item>Detail</item>
+        <item>Data Pembanding</item>
+        <item>Cek Tata Kota</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+    
+    <string-array name="menu_items_vch">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Valuation </item>
+        <item>Data</item>
+        <item>Data Pembanding</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+    
+    <string-array name="menu_items_mch">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Valuation</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+    
+    <string-array name="menu_items_psb">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Valuation</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+    
+    <string-array name="menu_items_pb">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Progress Bangunan</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+    <string-array name="menu_items_pd">
+        <item>Main</item>
+        <item>Dokumen Jaminan</item>
+        <item>Progress Developer</item>
+        <item>History</item>
+        <item>Workflow History</item>
+    </string-array>
+</resources>

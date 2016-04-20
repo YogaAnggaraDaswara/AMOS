@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/av_outlet_status_lbl_list_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_list_header_pitch"
+        android:textColor="@color/planning_list_lbl_page"
+        android:gravity="center_vertical"
+        android:text="@string/str_outlet_list"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/salesman_outlet_status_img_add"
+        android:layout_width="38dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/img_add_32_32" />
+
+
+    <ListView
+        android:id="@+id/av_outlet_status_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/av_outlet_status_lbl_list_title"
+        android:background="@drawable/img_list_body_pitch"
+        android:cacheColorHint="@android:color/transparent">
+
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="positive_button_text_appearance" parent="@android:style/TextAppearance.Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="positive_button" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/positive_button</item>
+        <item name="android:background">@drawable/positive_button</item>
+        <item name="android:textAppearance">@style/positive_button_text_appearance</item>\
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+</resources>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideInset"
+	android:fadeScrollbars="true"
+	android:scrollbarSize="10dip"
+	android:fitsSystemWindows="true" >
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+    
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_nama_dokumen"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/DOK" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+				<EditText
+	                android:id="@+id/data_kendaraan_txt_id_dokumen"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                android:visibility="gone"
+	                />
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_nama_dokumen"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                android:enabled="false" 
+	                />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_no_dokumen"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMNODOK" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_no_dokumen"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_tgl_kadaluarsa"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMTGL" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	           <LinearLayout
+	                android:id="@+id/val_rtb_linear_tgl_kadaluarsa"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_rtb_txt_tgl_kadaluarsa"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/val_rtb_view_img_tgl_kadaluarsa"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	        </LinearLayout>
+			</LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_warna_kendaraan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMASLI" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <LinearLayout
+	                android:id="@+id/data_kendaraan_linear_lokasi_jaminan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <RadioGroup
+	                    android:id="@+id/data_kendaraan_rdogroup_automatic"
+	                    android:layout_height="wrap_content"
+	                    android:layout_width="wrap_content"
+	                    android:orientation="vertical">
+	
+	                <RadioButton
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/JAMASLI"
+	                        android:textColor="@android:color/black"
+	                        android:id="@+id/data_kendaraan_rdo_asli" />
+	               
+	
+	                <RadioButton
+	                    android:id="@+id/data_kendaraan_rdo_copy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/JAMCOPY"
+	                    android:textColor="@android:color/black" />
+	
+	                <RadioButton
+	                    android:id="@+id/data_kendaraan_rdo_na"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/JAMNA"
+	                    android:textColor="@android:color/black" />
+	
+	                <RadioButton
+	                    android:id="@+id/data_kendaraan_rdo_waiver"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/JAMWAIVER"
+	                    android:textColor="@android:color/black" />
+	
+	                <RadioButton
+	                    android:id="@+id/data_kendaraan_rdo_tbo"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/JAMTBO"
+	                    android:textColor="@android:color/black" />
+	 				</RadioGroup>
+	            </LinearLayout>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_tgl_tbo"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMTGLTBO" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            
+	             <LinearLayout
+	                android:id="@+id/val_rtb_linear_tgl_tbo"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_rtb_txt_tgl_tbo"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/val_rtb_view_img_tgl_tbo"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	            </LinearLayout>
+	
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_justifikasi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMJUSTI" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_justifikasi"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_upload"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMUPLOAD" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_upload"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	
+	        </LinearLayout>
+	           <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_last_upload"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/JAMLASTUPLOAD" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_last_upload"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	
+	        </LinearLayout>
+	         <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_unit_nilai_likuidasi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	         
+				<Button
+	                android:id="@+id/btn_savedokumen"
+	                android:layout_marginTop="2dp"
+	                android:text="@string/form_action_save"
+	                style="@style/button_text"
+	                android:background="@color/color_blue_dark"
+	                android:layout_gravity="center"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:enabled="true" />
+	        </LinearLayout>
+	    </LinearLayout>
+	  </ScrollView>
+</RelativeLayout>

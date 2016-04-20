@@ -1,0 +1,1971 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:fitsSystemWindows="true"
+        android:scrollbarSize="10dip"
+        android:scrollbarStyle="insideInset" >
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            
+			<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_backgroundLG"
+	            android:layout_margin="1dp"
+	            android:padding="1dp">
+	
+	            <TextView
+	                android:id="@+id/val_rb_header_entry_deb"
+	                android:layout_width="wrap_content"
+	                android:layout_weight="5"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/HENTRYDEB" />
+        	</LinearLayout>
+          <!-- penambahan enam field -->
+			 
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_auto_prospek"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_rekening_handphone" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_auto_prospek"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+                
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_ap"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_ap" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+              
+                 <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_ap"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/form_prospek_ap" />
+            </LinearLayout>       
+		  <!-- end penambahan field -->	
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_nama_deb"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_namadebitur" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <EditText
+	                android:id="@+id/val_ams_txt_seq"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/val_ams_txt_nama_deb"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" />
+
+                   <!-- <requestFocus />
+                </EditText> --> 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_sex"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_sex" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                 <LinearLayout
+	                android:id="@+id/val_rtb_linear_sex"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	                <RadioGroup
+	                    android:id="@+id/val_rtb_rdogroup_sex"
+	                    android:layout_height="wrap_content"
+	                    android:layout_width="wrap_content"
+	                    android:orientation="horizontal">
+	
+	                    <RadioButton
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/L"
+	                        android:textColor="@android:color/black"
+	                        android:id="@+id/val_rtb_rdo_sex_male" />
+	
+	                    <RadioButton
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/P"
+	                        android:textColor="@android:color/black"
+	                        android:id="@+id/val_rtb_rdo_sex_female" />
+	                </RadioGroup>
+	            </LinearLayout>    
+            </LinearLayout> 
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_no_tlp"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_rekening_handphone" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_no_tlp"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_email"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FEMAIL" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_email"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_alamat"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_alamatrumah" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_alamat"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_tgllhr_deb"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FTGLLAHIRDEB" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <LinearLayout
+	                android:id="@+id/val_ams_linear_tgllhr_deb"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_ams_txt_tgllhr_deb"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/val_ams_view_img_tgllhr_deb"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_usia"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FUSIA" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_usia"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" 
+                    android:enabled="false" />
+                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:text=" Tahun"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_usia_b"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_usia_b"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" 
+                    android:enabled="false" />
+                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:text=" Bulan"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_job_type"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/FJNSKERJA" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+                
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_job_type"
+	                style="@style/spinner_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FJNSKERJA" />
+            </LinearLayout>
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_el"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_el" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+              
+                   <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_el"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/form_prospek_el" />
+            </LinearLayout> 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_nm_rel"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FNMREL" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_nm_rel"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_tgllhr_rel"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FTGLLAHIRREL" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <LinearLayout
+	                android:id="@+id/val_ams_linear_tgllhr_rel"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_ams_txt_tgllhr_rel"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/val_ams_view_img_tgllhr_rel"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_nm_usaha"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FNMUSAHA" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_nm_usaha"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_alamat_usaha"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FALAMATUSAHA" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_alamat_usaha"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_cus_reff"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_cus_reff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+              
+                 <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_cus_reff"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/form_prospek_cus_reff" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_yic"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_yic" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+              
+               <LinearLayout
+	                android:id="@+id/val_ams_linear_tgl_yic"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal">
+	
+	                <EditText
+	                    android:id="@+id/val_ams_txt_yic"
+	                    style="@style/edittext_2"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="text"
+	                    android:enabled="false" />
+	
+	                <ImageView
+	                    android:id="@+id/val_ams_view_img_yic"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="top"
+	                    android:src="@drawable/dp" />
+	            </LinearLayout>
+            </LinearLayout> 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_usia_yic"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_usia_yic"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100" 
+                    android:enabled="false" />
+                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:text=" Tahun"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_soc"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_soc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+              
+               <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_soc"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/form_prospek_soc" />
+            </LinearLayout> 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_pper_bln"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FPPERBLN" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_pper_bln"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                     />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_pengendapan"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FPENGENDAPAN" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_pengendapan"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                     />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_ex_lblt"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FEXLI" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_ex_lblt"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_prdct_kat"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/str_Kategory" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+           	 	<com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_prdct_kat"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/str_Kategory" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_prdct_jns"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/FPRDCTJNS" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_prdct_jns"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FPRDCTJNS" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_prdct_jnssub"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/FPRDCTJNSSUB" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+                
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_prdct_jnssub"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FPRDCTJNSSUB" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_jns_jaminan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/JJMN" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_jns_jaminan"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/JJMN" />
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_promo_code"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/PRCODE" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_promo_code"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/PRCODE" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_comp_asuransi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="60dp"
+	                style="@style/label_1"
+                    android:text="@string/FCOMPASUR" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_comp_asuransi"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FCOMPASUR" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_plan_asuransi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/FPLANASUR" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_plan_asuransi"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FPLANASUR" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/val_ams_layout1"
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_comp_asuransi_fire"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="60dp"
+	                style="@style/label_1"
+                    android:text="@string/FCOMPASURFIRE" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_comp_asuransi_fire"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FCOMPASURFIRE" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/val_ams_layout2"
+                android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+
+                <TextView
+	                android:id="@+id/val_ams_lbl_plan_asuransi_fire"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+                    android:text="@string/FPLANASURFIRE" />
+
+                <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+
+                <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_ams_spn_plan_asuransi_fire"
+	                style="@style/spinner_3"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/FPLANASURFIRE" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_hrg_rumah"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FHARGARMH" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_hrg_rumah"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_down_pay"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FDOWNPAY" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_down_pay"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_suku_bng"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FSUKUBNG" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_suku_bng"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_jw_kredit_perbln"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.35"
+                    android:text="@string/FJWKREDIT" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_jw_kredit_perbln"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                 android:id="@+id/val_ams_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_luas_bangunan"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/BUILDING_AREA" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_luas_bangunan"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/val_ams_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_hrg_bangunan"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FHRGBNG" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_hrg_bangunan"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_platfond_kredit"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FPLAKRE" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_platfond_kredit"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_cicilan"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FCICILAN" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_cicilan"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:enabled="false" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_ltv"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FLTV" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_ltv"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:enabled="false" />
+                
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_abr"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/form_prospek_abr" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+              
+                <EditText
+                    android:id="@+id/val_ams_txt_abr"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:enabled="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_iir_dbr"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FIIRDBR" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_iir_dbr"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:enabled="false" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_backgroundLG"
+	            android:layout_margin="1dp"
+	            android:padding="1dp">
+	
+	            <TextView
+	                android:id="@+id/val_rb_header_biaya_kredit"
+	                android:layout_width="wrap_content"
+	                android:layout_weight="5"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/HBIAYAKREDIT" />
+        	</LinearLayout>
+        	
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_provisi"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FPROVISI" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_provisi"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+                    android:enabled="false" />
+                    
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_biaya_administrasi"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FBIAYAADMIN" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_biaya_administrasi"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:enabled="false" />
+	                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_biaya_asuransi"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FBIAYAASUR" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_biaya_asuransi"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:enabled="false" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/val_ams_layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_biaya_asuransi_fire"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.35"
+                    android:text="@string/FBIAYAASURFIRE" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_biaya_asuransi_fire"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:enabled="false" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_biaya_notaris"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FBIAYANOTARIS" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <TextView
+                    android:id="@+id/val_ams_lbl_sesuai_ket_berlaku"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="@string/SESUAIKETBERLAKU" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_biaya_notaris"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:enabled="false" 
+	                android:visibility="gone"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_biaya_ppht"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/FBIAYAPPHT" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/val_ams_txt_biaya_ppht"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:enabled="false" />
+                
+            </LinearLayout>
+	         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/color_followup"
+                android:orientation="horizontal"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/val_ams_lbl_hasil_scoring"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/HASILSCORE" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/val_ams_txt_hasil_scoring"
+                    style="@style/edittext_2"
+                    android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                android:enabled="false" />
+                
+            </LinearLayout>
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_gravity="center"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+				<Button
+	                android:id="@+id/btn_save"
+                 	android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/button_text_navigator_menu"
+					android:text="@string/str_save"
+					android:layout_gravity="center" />
+                <Button
+	                android:id="@+id/btn_submit"
+                 	android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/button_text_navigator_menu"
+					android:text="@string/str_submit"
+					android:layout_gravity="center" />
+                <Button
+	                android:id="@+id/btn_submit_score"
+                 	android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/button_text_navigator_menu"
+					android:text="@string/btn_submit_score"
+					android:layout_gravity="center" />
+                  <Button
+	                android:id="@+id/btn_submit_delete"
+                 	android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/button_text_navigator_menu"
+					android:text="@string/btn_delete"
+					android:layout_gravity="center" />
+                <Button
+	                android:id="@+id/btn_cancel"
+                 	android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/button_text_navigator_menu"
+					android:text="@string/str_clear_scr"
+					android:layout_gravity="center" />
+
+	        </LinearLayout>
+	        
+            
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/inbox_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/color_bacground1"
+        android:gravity="right"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/inbox_btn_back"
+            android:layout_height="38dp"
+            android:layout_width="80dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/str_back"
+            android:src="@drawable/back" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

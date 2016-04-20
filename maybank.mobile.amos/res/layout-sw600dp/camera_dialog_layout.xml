@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:background="@drawable/img_dialog_content_bg_pitch"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/camera_dialog_lbl_title"
+        style="@style/master_content_title"
+        android:text="@string/str_camera" />
+
+    <RelativeLayout
+        android:id="@+id/camera_dialog_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/camera_dialog_btn_cancel"
+            style="@style/negative_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/str_cancel" />
+
+        <Button
+            android:id="@+id/camera_dialog_btn_ok"
+            style="@style/positive_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/str_ok" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/camera_dialog_body_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/camera_dialog_footer_layout"
+        android:layout_below="@id/camera_dialog_lbl_title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <com.mobile.framework.media.CameraPreview
+            android:id="@+id/camera_camera_viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>

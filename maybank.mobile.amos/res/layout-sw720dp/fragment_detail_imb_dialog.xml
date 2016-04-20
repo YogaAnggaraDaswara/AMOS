@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_backgroundLG"
+            android:layout_margin="1dp"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/data_kendaraan_header_data_jaminan"
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/IMB" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/data_kendaraan_lbl_no_imb"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/NOIMB" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+			<EditText
+			    android:id="@+id/data_kendaraan_txt_id"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone" />
+
+			<EditText
+			    android:id="@+id/data_kendaraan_txt_seq"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/data_kendaraan_txt_no_imb"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:maxLength="20"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:capitalize="characters" />
+        </LinearLayout>
+
+      
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/data_kendaraan_lbl_imb"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/TAHUN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+             <LinearLayout
+                android:id="@+id/val_kendaraan_linear_tgl_imb"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/val_kendaraan_txt_tgl_imb"
+                    style="@style/edittext_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:enabled="false" />
+
+                <ImageView
+                    android:id="@+id/val_kendaraan_view_img_imb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:src="@drawable/dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp">
+
+            <TextView
+                android:id="@+id/data_kendaraan_lbl_peruntukan"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/PERUNTUKAN" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=":"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/data_kendaraan_txt_peruntukan"
+                style="@style/edittext_2"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:maxLength="200"
+                android:layout_height="200dp"
+                android:inputType="textMultiLine|textCapCharacters"/>
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_followup"
+            android:layout_margin="0.5dp"
+            android:padding="0.5dp"
+            android:layout_gravity="center">
+
+           
+
+          <Button
+                android:id="@+id/btn_saveimb"
+                android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:background="@drawable/button_nav"
+	                 android:text="@string/str_save"
+	                 android:layout_gravity="center" />
+        </LinearLayout>
+        
+    </LinearLayout>
+</RelativeLayout>

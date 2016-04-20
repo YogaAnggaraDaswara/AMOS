@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideInset"
+	android:fadeScrollbars="true"
+	android:scrollbarSize="10dip"
+	android:fitsSystemWindows="true" >
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+    
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_no_aplikasi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY1" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+				
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_no_aplikasi"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"/>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_jaminan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY2" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_jaminan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"/>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_branch"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY3" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	           <EditText
+	                android:id="@+id/data_kendaraan_txt_branch"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"/>
+			</LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_nm_pemohon"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY4" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_nm_pemohon"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"/>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_tipe_customer"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY5" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            
+	             <EditText
+	                android:id="@+id/data_kendaraan_txt_tipe_customer"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"/>
+	
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_kelurahan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY6" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_kelurahan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_kecamatan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY7" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_kecamatan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	
+	        </LinearLayout>
+	           <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_no_sertifikat"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY8" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_no_sertifikat"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/data_kendaraan_lbl_tahapan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.25"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/INQUERY9" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/data_kendaraan_txt_tahapan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.6"
+	                android:ems="10"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:capitalize="characters"
+	                 />
+	
+	        </LinearLayout>
+	         <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+				<Button
+				    android:id="@+id/btn_savedokumen"
+				    style="@style/button_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center"
+				    android:layout_marginTop="2dp"
+				    android:background="@drawable/button_ok"
+				    android:enabled="true" />
+
+	        </LinearLayout>
+	    </LinearLayout>
+	  </ScrollView>
+</RelativeLayout>

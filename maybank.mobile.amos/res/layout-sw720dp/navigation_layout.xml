@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/home_menu_dataprospek"
+        android:layout_marginTop="10dp"
+        android:text="@string/HENTRYDEB"
+        style="@style/button_text_navigator"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:enabled="true" />
+
+   <Button
+        android:id="@+id/home_menu_getlov"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/inq_update"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" />
+    
+  	<Button
+        android:id="@+id/home_menu_upload_doc"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/lbl_upload_doc"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" />
+  	
+  	
+  	
+  	<Button
+        android:id="@+id/home_menu_deb_sts"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/str_apk_information"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" />
+  	
+  	<Button
+        android:id="@+id/home_menu_doc_sts"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/lbl_doc_sts"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" 
+        android:visibility="gone"/>
+  	
+  	<Button
+        android:id="@+id/home_menu_ubahpassword"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/lbl_chng_pass"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" />
+  	<Button
+        android:id="@+id/home_menu_download_master"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/lbl_download_master"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" 
+        />
+  	<Button
+        android:id="@+id/home_menu_log_email"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/lbl_logemail"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" 
+        android:visibility="gone"/>
+  	<Button
+        android:id="@+id/home_menu_log_upload"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/lbl_logImage"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" 
+        android:visibility="gone"/>
+  	<Button
+        android:id="@+id/home_btn_logout"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="@string/str_logout"
+        style="@style/button_text_navigator"
+        android:layout_gravity="center"
+        android:enabled="true" />
+
+</LinearLayout>
+
+    

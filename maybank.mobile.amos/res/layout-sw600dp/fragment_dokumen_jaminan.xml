@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:background="@color/color_white" 
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+        android:id="@+id/contentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:background="@drawable/img_background3">
+        	 <TextView
+                android:id="@+id/info_Nama_deb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"/>
+		    <TextView
+                android:id="@+id/info_Nama_Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1" 
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_white"/>
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<ScrollView 
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:scrollbarStyle="insideInset"
+android:fadeScrollbars="true"
+android:scrollbarSize="10dip"
+android:fitsSystemWindows="true" >
+		<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+
+            <TextView
+                android:id="@+id/tabungan_lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DOKJAMINAN"
+                style="@style/label_header" />
+			<HorizontalScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:scrollbarStyle="insideInset"
+			android:fadeScrollbars="true"
+			android:scrollbarSize="10dip"
+			android:fitsSystemWindows="true"   >
+				<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="horizontal" >
+		            <TableLayout
+		                android:layout_width="wrap_content"
+		    			android:layout_height="wrap_content"
+		    			android:scrollbarAlwaysDrawHorizontalTrack="true"
+		    			android:scrollbarAlwaysDrawVerticalTrack="true"
+		                android:id="@+id/inbox_tableLayout"
+		                android:layout_weight="1"
+		                android:padding="5dp" />
+
+            
+        		</LinearLayout>
+			</HorizontalScrollView>
+	</LinearLayout>
+</ScrollView>
+</LinearLayout>
+</LinearLayout>

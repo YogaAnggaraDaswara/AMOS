@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:background="@color/color_bacground1">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/master_content_lbl_content_title"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/color_blue"
+        android:gravity="left|center_vertical"
+        android:text="@string/str_title"
+        android:textColor="@color/planning_list_lbl_content_title"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/master_content_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:background="@drawable/img_content_footer_pitch"
+        android:padding="2dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/master_content_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/master_content_lbl_content_title"
+        android:layout_marginTop="3dp"
+        android:layout_above="@id/master_content_footer_layout"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/color_bacground1"></RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/master_content_prg_loading"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:visibility="gone" />
+
+</RelativeLayout>

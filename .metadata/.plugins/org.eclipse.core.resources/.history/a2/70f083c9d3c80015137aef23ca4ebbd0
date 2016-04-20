@@ -1,0 +1,453 @@
+package com.mobile.amos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+
+import com.mobile.app.activity.HomeActivity;
+import com.mobile.app.configuration.AppConstants;
+import com.mobile.bo.app.datatype.DataType_inbox_document;
+import com.mobile.bo.app.datatype.UserData;
+import com.mobile.database.app.common.DataConverter;
+import com.mobile.framework.activity.ActivityHandler;
+import com.mobile.framework.activity.ActivityNameValuePair;
+import com.mobile.framework.common.DateFormatter;
+import com.mobile.framework.data.SessionSharedPreference;
+import com.mobile.services.app.ServiceData;
+import com.mobile.services.app.datatype.RequestCount;
+import com.mobile.services.app.datatype.SERVICEDATARESPONSE;
+import com.mobile.services.app.services.ServiceDataProvider;
+
+
+import maybank.mobile.amos.R;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+
+public class Upload_DocumentActivity extends Activity {
+	
+	private Context ctx;
+	private TableLayout amos_TableLayout;
+	private TextView lbl_tbl_name;
+	private ArrayList<DataType_inbox_document> listInquery = null;
+	private int pageNo = 0;// page
+    private int pageCount = 0;// total number of pages
+    private Button btnNext;
+    private Button btnPrev;
+    private Button btnFirst;
+    private Button btnLast;
+    private TextView txtPageno;
+    
+    private UserData userDetail;
+    
+	public Upload_DocumentActivity() {
+    	
+    }
+	
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		ctx = this;
+		try {
+			userDetail = (UserData) SessionSharedPreference.getDataFromSharedPreference(ctx, UserData.class, AppConstants.USER_SESSION);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		setTitle(R.string.lbl_upload_doc);
+		getActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
+        
+		setContentView(R.layout.amos_upload_document);
+		
+		amos_TableLayout = (TableLayout) findViewById(R.id.amos_tableLayout1);
+		lbl_tbl_name =(TextView) findViewById(R.id.lbl_tbl_amos);
+		
+		lbl_tbl_name.setText(R.string.lbl_upload_doc);
+		btnNext = (Button) findViewById(R.id.btn_next);
+	    btnPrev = (Button) findViewById(R.id.btn_prev);
+	    btnFirst = (Button) findViewById(R.id.btn_first);
+	    btnLast = (Button) findViewById(R.id.btn_last);
+	    txtPageno = (TextView) findViewById(R.id.txtPageno);
+	    btnNext.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    // TODO Auto-generated method stub
+                    //showProgressIndicator();
+                    if (pageCount > pageNo) {
+                        pageNo++;
+                        GetDataInqury(pageNo);
+                        viewListUpload();
+                        setpageNo(pageNo);
+                    }
+                    //hideProgressIndicator();
+                } catch (Exception ex) {
+                   // showAlert(ex.getMessage().toString());
+                }
+            }
+        });
+        btnPrev.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    // TODO Auto-generated method stub
+                    //showProgressIndicator();
+                    if (pageNo > 1) {
+                        pageNo--;
+                        GetDataInqury(pageNo);
+                        viewListUpload();
+                        setpageNo(pageNo);
+                    }
+                    //hideProgressIndicator();
+                } catch (Exception ex) {
+                    //showAlert(ex.getMessage().toString());
+                }
+            }
+
+        });
+
+        btnFirst.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    // TODO Auto-generated method stub
+                    //showProgressIndicator();
+                    if (pageCount > 1 && pageNo != 1) {
+                    	GetDataInqury(1);
+                        pageNo = 1;
+                        viewListUpload();
+                        setpageNo(1);
+                    }
+                    //hideProgressIndicator();
+                    //if(pageCount==pageNo_
+                    //disable pageno
+                } catch (Exception ex) {
+                    //showAlert(ex.getMessage().toString());
+                }
+            }
+        });
+        btnLast.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+
+                    //showProgressIndicator();
+                    // TODO Auto-generated method stub
+                    if (pageCount > 1 && pageNo != pageCount) {
+                    	GetDataInqury(pageCount);
+                        pageNo = pageCount;
+                        viewListUpload();
+                        setpageNo(pageCount);
+                    }
+                    //hideProgressIndicator();
+                    //if(pageCount==pageNo_
+                    //disable pageno
+                } catch (Exception ex) {
+                    //showAlert(ex.getMessage().toString());
+                }
+            }
+        });
+        
+        getDataFromServerAmos();
+	}
+	
+	private void getDataFromServerAmos() {
+		pageCount = GetDataCountInquery();
+        if(pageCount>0){
+    		pageNo = 1;
+    		GetDataInqury(1);
+    		viewListUpload();
+        }
+	}
+	
+	private void GetDataInqury(int sPages){
+    	if (listInquery != null) {
+    		listInquery.clear();
+        }
+        setpageNo(sPages);
+        
+        String Userid = userDetail.getUSERID();
+		String Branchid = userDetail.getUNIT();
+		 
+		ArrayList<NameValuePair> params1 = new ArrayList<NameValuePair>();
+        params1.add(new BasicNameValuePair("Userid", "" + Userid ));
+        params1.add(new BasicNameValuePair("Branchid",Branchid));
+        params1.add(new BasicNameValuePair("Pages","" + pageNo));
+                
+        SERVICEDATARESPONSE lovResponse;
+		try {
+			lovResponse = ServiceDataProvider.GetdataInqueryDocumment(params1);
+		
+          
+          if (lovResponse != null) {
+        	  listInquery = ServiceData.GetdataInqueryDocument(new JSONArray(lovResponse.getResults()));
+              if (lovResponse.getStatus() == 1) {
+                 
+              }
+              //Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+          }
+          lovResponse = null;
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		viewListUpload();
+    }
+	private int GetDataCountInquery(){
+    	
+    	
+    	int intCount = 0;
+    	try {
+    		String Userid= userDetail.getUSERID();
+    		String Branchid=userDetail.getUNIT();
+    		 
+    		ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
+    		params.add(new BasicNameValuePair("Userid", "" + Userid ));
+    		params.add(new BasicNameValuePair("Branchid",Branchid));
+            
+            SERVICEDATARESPONSE masterCountResponse = ServiceDataProvider.GetdataInqueryDocummentCount(params);
+            if (masterCountResponse != null) {
+                ArrayList<RequestCount> arrTabunganCountData = ServiceData.GetdataInqueryDocumentCount(new JSONArray(masterCountResponse.getResults()));
+                if (masterCountResponse.getStatus() == 1) {
+                    RequestCount contentdata = arrTabunganCountData.get(0);
+                    intCount = Integer.parseInt(contentdata.getPAGES().toString());
+                }
+   	
+            }
+   	  	    	
+                
+    	} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+    	}
+    	return intCount;
+    }
+    private void setpageNo(int pageNo) {
+        String text = null;
+        text = pageNo + "/" + pageCount;
+        txtPageno.setText(text);
+    }
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+            menu.add("Refresh")
+              	.setIcon(R.drawable.download)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+
+//            menu.add("Back")
+//                .setIcon(R.drawable.back)
+//                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+		return true;
+    }
+	
+	@Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        return super.onPrepareOptionsMenu(menu);
+    }
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        
+		if(item.getTitle().toString()=="Refresh") {
+			getDataFromServerAmos();
+		}
+		
+		int id=item.getItemId();
+   	 	if (id==android.R.id.home) {
+   	 		BackActivity();
+        }
+		return true;
+    }
+  
+  
+	public void BackActivity() {
+		Intent i = new Intent(Upload_DocumentActivity.this, HomeActivity.class);   
+		startActivity(i);
+		finish();
+	}
+	
+	private void viewListUpload()
+	{
+		amos_TableLayout.removeAllViews();
+		
+		TableRow rowHeaderTable = new TableRow(this);
+        rowHeaderTable.setBackgroundColor(getResources().getColor(R.color.color_bacground2));
+        rowHeaderTable.setPadding(0, 0, 0, 2);
+
+        TableRow.LayoutParams rowParamsDetail = new TableRow.LayoutParams();
+        rowParamsDetail.gravity = Gravity.LEFT;
+
+        TextView header = new TextView(ctx);
+        header.setGravity(Gravity.LEFT);
+        header.setTextColor(getResources().getColor(android.R.color.black));
+        header.setPadding(0, 3, 0, 3);
+        header.setTextSize(12);
+        header.setWidth(150);
+        header.setText("Action");
+
+        rowHeaderTable.addView(header, rowParamsDetail);
+        
+        TextView header1 = new TextView(ctx);
+        header1.setGravity(Gravity.LEFT);
+        header1.setTextColor(getResources().getColor(android.R.color.black));
+        header1.setPadding(0, 3, 0, 3);
+        header1.setTextSize(12);
+        header1.setWidth(150);
+        header1.setText("No Aplikasi");
+        rowHeaderTable.addView(header1, rowParamsDetail);
+        
+        TextView header2 = new TextView(ctx);
+        header2.setGravity(Gravity.LEFT);
+        header2.setTextColor(getResources().getColor(android.R.color.black));
+        header2.setPadding(0, 3, 0, 3);
+        header2.setTextSize(12);
+        header2.setWidth(150);
+        header2.setText("Tipe Produk");
+        rowHeaderTable.addView(header2, rowParamsDetail);
+
+        TextView header3 = new TextView(ctx);
+        header3.setGravity(Gravity.LEFT);
+        header3.setTextColor(getResources().getColor(android.R.color.black));
+        header3.setPadding(0, 2, 0,2);
+        header3.setTextSize(12);
+        header3.setWidth(150);
+        header3.setText("Nama Debitur");
+        rowHeaderTable.addView(header3, rowParamsDetail);
+        
+        TextView header4 = new TextView(ctx);
+        header4.setGravity(Gravity.LEFT);
+        header4.setTextColor(getResources().getColor(android.R.color.black));
+        header4.setPadding(0, 2, 0,2);
+        header4.setTextSize(12);
+        header4.setWidth(150);
+        header4.setText("Tanggal Lahir");
+        rowHeaderTable.addView(header4, rowParamsDetail);
+        
+        TextView header5 = new TextView(ctx);
+        header5.setGravity(Gravity.LEFT);
+        header5.setTextColor(getResources().getColor(android.R.color.black));
+        header5.setPadding(0, 2, 0,2);
+        header5.setTextSize(12);
+        header5.setWidth(150);
+        header5.setText("Tanggal Input");
+        rowHeaderTable.addView(header5, rowParamsDetail);
+        
+        amos_TableLayout.addView(rowHeaderTable);
+        
+        //isi list
+        
+        if(listInquery!=null){
+            for (int i = 0; i < listInquery.size(); i++) {
+            	final TableRow rowContentTable = new TableRow(ctx);
+            	//final Datatype_Appr_Inbox contentdata = listdata.get(i);
+            	final DataType_inbox_document contentdata = listInquery.get(i);
+		        
+		         Button content_detail = new Button(ctx);
+		        content_detail.setGravity(Gravity.CENTER);
+		        content_detail.setText(R.string.form_action_detail1);
+		        //content_detail.setWidth(30);
+		        rowContentTable.addView(content_detail, 5, 50);
+		        content_detail.setOnClickListener(new View.OnClickListener() {
+		
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						TextView valueRegNo = (TextView) rowContentTable.getChildAt(1);
+		            	
+		            	List<ActivityNameValuePair> params = new ArrayList<ActivityNameValuePair>();
+		                params.add(new ActivityNameValuePair("AP_REGNO", valueRegNo.getText().toString()));
+		                ActivityHandler.gotoActivity(ctx, Upload_JaminanActivity.class, params);
+		                
+//		            	Intent i = new Intent(Upload_DocumentActivity.this, MainActivityUpload.class);
+//		            	i.putExtra("AP_REGNO", valueRegNo.getText().toString());
+//		            	startActivity(i);
+//		                finish();
+						
+					}
+		        	
+		        });
+		       TextView content_ap_regno = new TextView(ctx);
+	            content_ap_regno.setGravity(Gravity.LEFT);
+	            content_ap_regno.setTextColor(getResources().getColor(android.R.color.black));
+	            content_ap_regno.setPadding(0, 3, 0, 3);
+	            content_ap_regno.setTextSize(12);
+	            content_ap_regno.setWidth(150);
+	            content_ap_regno.setText(contentdata.getAP_REGNO());
+	            rowContentTable.addView(content_ap_regno, rowParamsDetail);
+	            
+	            TextView content_product = new TextView(ctx);
+	            content_product.setGravity(Gravity.LEFT);
+	            content_product.setTextColor(getResources().getColor(android.R.color.black));
+	            content_product.setPadding(0, 3, 0, 3);
+	            content_product.setTextSize(12);
+	            content_product.setWidth(150);
+	            content_product.setText(contentdata.getPRODUCTDESC());
+	            rowContentTable.addView(content_product, rowParamsDetail);
+	            
+	            TextView content_nama = new TextView(ctx);
+	            content_nama.setGravity(Gravity.LEFT);
+	            content_nama.setTextColor(getResources().getColor(android.R.color.black));
+	            content_nama.setPadding(0, 3, 0, 3);
+	            content_nama.setTextSize(12);
+	            content_nama.setWidth(150);
+	            content_nama.setText(contentdata.getAP_NEXTTRBYNAME());
+	            rowContentTable.addView(content_nama, rowParamsDetail);
+	            
+	            TextView content_lahir = new TextView(ctx);
+	            content_lahir.setGravity(Gravity.LEFT);
+	            content_lahir.setTextColor(getResources().getColor(android.R.color.black));
+	            content_lahir.setPadding(0, 3, 0, 3);
+	            content_lahir.setTextSize(12);
+	            content_lahir.setWidth(150);
+	            try{
+	            	content_lahir.setText(DateFormatter.formatString(DataConverter.stringToDate(contentdata.getCU_BORNDATE())));
+	            }
+	            catch(Exception ex){
+	            	content_lahir.setText("");
+	            }
+	            rowContentTable.addView(content_lahir, rowParamsDetail);
+	            
+	            TextView content_tgl_input = new TextView(ctx);
+	            content_tgl_input.setGravity(Gravity.LEFT);
+	            content_tgl_input.setTextColor(getResources().getColor(android.R.color.black));
+	            content_tgl_input.setPadding(0, 3, 0, 3);
+	            content_tgl_input.setTextSize(12);
+	            content_tgl_input.setWidth(150);
+	            try{
+	            	content_lahir.setText(DateFormatter.formatString(DataConverter.stringToDate(contentdata.getAP_RECVDATE())));
+	            }
+	            catch(Exception ex){
+	            	content_lahir.setText("");
+	            }
+	            rowContentTable.addView(content_tgl_input, rowParamsDetail);
+	            
+		        amos_TableLayout.addView(rowContentTable);
+            }
+        }
+	}
+	
+	@Override
+    public void onBackPressed() {
+        ActivityHandler.gotoActivity(ctx, HomeActivity.class, null);
+        finish();
+    }
+}

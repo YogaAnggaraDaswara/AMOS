@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_view_flipper"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:measureAllChildren="true" >
+
+    <com.mobile.framework.widget.CalendarView
+        android:id="@+id/ctrl_calender_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.mobile.framework.widget.CalendarView>
+
+    <com.mobile.framework.widget.CalendarView
+        android:id="@+id/ctrl_calender_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.mobile.framework.widget.CalendarView>
+
+</ViewFlipper>

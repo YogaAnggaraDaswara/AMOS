@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/location_body_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_blue">
+
+    <RelativeLayout
+        android:id="@+id/location_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/location_lbl_user_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/str_user_information"
+            style="@style/label_1"
+            android:layout_alignParentLeft="true"
+            android:gravity="left" />
+
+        <TextView
+            android:id="@+id/location_lbl_currentdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/master_lbl_user_information"
+            android:text="@string/str_date"
+            style="@style/label_1"
+            android:gravity="right"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/location_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp"
+        android:layout_below="@+id/location_header_layout">
+
+        <LinearLayout
+            android:id="@+id/location_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                class="com.google.android.gms.maps.SupportMapFragment" />
+
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"></RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/location_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right">
+
+
+        <ImageView
+            android:id="@+id/location_btn_back"
+            android:layout_height="38dp"
+            android:layout_width="80dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/str_back"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+</RelativeLayout>

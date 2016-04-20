@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sm_calender_view_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_sm_calendar_view_background" >
+
+    <TextView
+        android:id="@+id/lbl_sm_calendar_view_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="MONDAY"
+        android:textColor="@color/lbl_sm_calendar_view_day" android:textSize="10sp" android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lbl_sm_calendar_view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="31"
+        android:textColor="@color/lbl_sm_calendar_view_date"
+        android:textSize="40sp"
+        android:textStyle="bold" android:layout_below="@id/lbl_sm_calendar_view_day" android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/lbl_sm_calendar_view_month_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AAA"
+        android:textColor="@color/lbl_sm_calendar_view_month_year"
+        android:textSize="10sp"
+        android:textStyle="bold" android:layout_below="@id/lbl_sm_calendar_view_date" android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="master_content_text" parent="@android:style/TextAppearance">s
+        <item name="android:textColor">@color/master_content_label</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="master_content_text2" parent="@android:style/TextAppearance">s
+        <item name="android:textColor">@color/master_content_label</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

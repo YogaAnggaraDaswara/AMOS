@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SM.Framework</string>
+    <string name="txt_sm_day_0">Senin</string>
+    <string name="txt_sm_day_1">Selasa</string>
+    <string name="txt_sm_day_2">Rabu</string>
+    <string name="txt_sm_day_3">Kamis</string>
+    <string name="txt_sm_day_4">Jumat</string>
+    <string name="txt_sm_day_5">Sabtu</string>
+    <string name="txt_sm_day_6">Minggu</string>
+    <string name="txt_sm_month">Month</string>
+    <string name="txt_sm_year">Year</string>
+</resources>

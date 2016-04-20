@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cashcheckup_body_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_blue">
+
+    <RelativeLayout
+        android:id="@+id/cashcheckup_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/cashcheckup_header_layout">
+
+        <TextView
+            android:id="@+id/cashcheckup_lbl_user_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/str_user_information"
+            style="@style/label_1"
+            android:layout_alignParentLeft="true"
+            android:gravity="left" />
+
+        <TextView
+            android:id="@+id/cashcheckup_lbl_currentdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/str_date"
+            style="@style/label_1"
+            android:gravity="right"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/contentheadermitra"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_below="@+id/cashcheckup_header_layout">
+
+        <TextView
+            android:id="@+id/cashcheckup_lbl_mitra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="100dp"
+            android:text="@string/activity_cashcheckup_mitra"
+            style="@style/label_1"
+            android:gravity="left" />
+
+        <com.mobile.framework.widget.ExSpinner
+            android:id="@+id/cashcheckup_view_spn_mitra"
+            style="@style/spinner_2"
+            android:layout_marginLeft="50dp"
+            android:prompt="@string/activity_cashcheckup_mitra" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/cashcheckup_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp"
+        android:layout_below="@+id/contentheadermitra">
+
+        <RelativeLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/cashcheckup_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right">
+
+
+        <ImageView
+            android:id="@+id/cashcheckup_btn_back"
+            android:layout_height="38dp"
+            android:layout_width="80dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/str_back"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@color/color_followup"
+    android:layout_marginBottom="10dp">
+
+    <ScrollView
+        android:id="@+id/followup_dlg_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp">
+
+
+        <LinearLayout
+            android:id="@+id/contentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:background="@color/color_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_followup"
+                android:layout_margin="0.5dp"
+                android:padding="0.5dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_totalrecords_value"
+                    style="@style/label_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    android:gravity="right"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_followup"
+                android:layout_margin="0.5dp"
+                android:padding="0.5dp">
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_stage"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_followup_stage" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_stage_value"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_followup"
+                android:layout_margin="0.5dp"
+                android:padding="0.5dp">
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_nextfollowup"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_followup_nextfollowup" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/followup_view_lbl_nextfollowup_value"
+                        style="@style/label_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_dash"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/followup_view_txt_nextfollowup_value"
+                        style="@style/edittext_2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:enabled="false" />
+
+                    <ImageView
+                        android:id="@+id/followup_view_img_nextfollowup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_followup"
+                android:layout_margin="0.5dp"
+                android:padding="0.5dp">
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_actionby"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_followup_actionby" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_actionby_value"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    android:visibility="gone" />
+
+                <com.mobile.framework.widget.ExSpinner
+                    android:id="@+id/followup_view_spn_actionby"
+                    style="@style/spinner_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:prompt="@string/form_followup_actionby"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_followup"
+                android:layout_margin="0.5dp"
+                android:padding="0.5dp">
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_status"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_followup_status" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_status_value"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    android:visibility="gone" />
+
+                <com.mobile.framework.widget.ExSpinner
+                    android:id="@+id/followup_view_spn_status"
+                    style="@style/spinner_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:prompt="@string/form_followup_status"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_followup"
+                android:layout_margin="0.5dp"
+                android:padding="0.5dp">
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_catatan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="wrap_content"
+                    style="@style/label_1"
+                    android:text="@string/form_followup_catatan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.05"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/followup_view_lbl_catatan_value"
+                    style="@style/label_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/followup_view_txt_catatan_value"
+                    style="@style/edittext_2"
+                    android:imeOptions="actionDone"
+                    android:layout_height="80dp"
+                    android:ems="10"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:visibility="visible"
+                    android:maxLength="100" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/followup_dlg_content_container"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/followup_view_btn_first"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_first"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_prev"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_prev"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_next"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_next"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_last"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_last"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_save"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_savelc"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_add"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_add"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_delete"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_del"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/followup_view_btn_back"
+            android:layout_marginTop="2dp"
+            style="@style/button_text"
+            android:background="@drawable/button_back"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

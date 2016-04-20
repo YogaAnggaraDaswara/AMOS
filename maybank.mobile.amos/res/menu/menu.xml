@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/backtoao"
+        android:icon="@drawable/backassigment"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="Save"/>
+    <item
+        android:id="@+id/pending"
+        android:icon="@drawable/pending"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="Save"/>
+        
+    <item
+        android:id="@+id/save"
+        android:icon="@drawable/proceed"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="Save"/>
+    
+    <item
+        android:id="@+id/back"
+        android:icon="@drawable/back"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="Back"/>
+</menu>

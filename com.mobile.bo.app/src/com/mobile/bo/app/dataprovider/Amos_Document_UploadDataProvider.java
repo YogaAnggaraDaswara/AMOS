@@ -1,0 +1,188 @@
+package com.mobile.bo.app.dataprovider;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.j256.ormlite.dao.Dao.CreateOrUpdateStatus;
+import com.j256.ormlite.stmt.DeleteBuilder;
+import com.mobile.bo.app.datatype.DataType_Amos_Document_Upload;
+import com.mobile.database.app.entities.AMOS_DOCUMENT_UPLOAD;
+
+public class Amos_Document_UploadDataProvider extends BaseDataProvider {
+	
+	public ArrayList<DataType_Amos_Document_Upload> getAllData_search_by_User(String ap_regno) {
+		ArrayList<DataType_Amos_Document_Upload> retVal = new ArrayList<DataType_Amos_Document_Upload>();
+		List<AMOS_DOCUMENT_UPLOAD> qResult = null;
+		
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				qResult = getAMOS_DOCUMENT_UPLOAD().queryBuilder().where().eq("AP_REGNO", ap_regno).query();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (qResult != null) {
+				for (AMOS_DOCUMENT_UPLOAD rowData : qResult) {
+					//retVal=(new Datatype_Amos_Document_Upload(rowData));
+					
+					retVal.add(new DataType_Amos_Document_Upload(rowData));
+				}
+			}
+		}
+		
+		return retVal;
+	}
+	public ArrayList<DataType_Amos_Document_Upload> getAllData_search_by_Userupload(String ap_regno) {
+		ArrayList<DataType_Amos_Document_Upload> retVal = new ArrayList<DataType_Amos_Document_Upload>();
+		List<AMOS_DOCUMENT_UPLOAD> qResult = null;
+		
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				qResult = getAMOS_DOCUMENT_UPLOAD().queryBuilder().where().eq("AP_REGNO", ap_regno).and().eq("ISALREADYSUBMIT", "1").query();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (qResult != null) {
+				for (AMOS_DOCUMENT_UPLOAD rowData : qResult) {
+					//retVal=(new Datatype_Amos_Document_Upload(rowData));
+					
+					retVal.add(new DataType_Amos_Document_Upload(rowData));
+				}
+			}
+		}
+		
+		return retVal;
+	}
+	
+	public ArrayList<DataType_Amos_Document_Upload> getAllData_bySubimt(ArrayList<String> IdS, ArrayList<String> cODE, String noApk) {
+		ArrayList<DataType_Amos_Document_Upload> retVal = new ArrayList<DataType_Amos_Document_Upload>();
+		List<AMOS_DOCUMENT_UPLOAD> qResult = null;
+		
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				qResult = getAMOS_DOCUMENT_UPLOAD().queryBuilder().where().in("ID", IdS).
+						and().eq("AP_REGNO", noApk).and().in("DOC_CODE", cODE).query();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (qResult != null) {
+				for (AMOS_DOCUMENT_UPLOAD rowData : qResult) {
+					//retVal=(new Datatype_Amos_Document_Upload(rowData));
+					
+					retVal.add(new DataType_Amos_Document_Upload(rowData));
+				}
+			}
+		}
+		
+		return retVal;
+	}
+	
+	public DataType_Amos_Document_Upload getAllData_search_by_Id(String ID) {
+		DataType_Amos_Document_Upload retVal = new DataType_Amos_Document_Upload();
+		List<AMOS_DOCUMENT_UPLOAD> qResult = null;
+		
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				qResult = getAMOS_DOCUMENT_UPLOAD().queryBuilder().where().eq("ID", ID).and().query();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (qResult != null) {
+				for (AMOS_DOCUMENT_UPLOAD rowData : qResult) {
+					retVal=(new DataType_Amos_Document_Upload(rowData));
+					
+					//retVal.add(new Datatype_Amos_Document_Upload(rowData));
+				}
+			}
+		}
+		
+		return retVal;
+	}
+	public int getData_search_by_MaxSeq(String ap_regno) {
+		DataType_Amos_Document_Upload retVal = new DataType_Amos_Document_Upload();
+		List<AMOS_DOCUMENT_UPLOAD> qResult = null;
+		
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				qResult = getAMOS_DOCUMENT_UPLOAD().queryBuilder().orderByRaw("SEQ desc").where().eq("AP_REGNO", ap_regno).query();
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (qResult != null) {
+				for (AMOS_DOCUMENT_UPLOAD rowData : qResult) {
+					retVal = (new DataType_Amos_Document_Upload(rowData));
+					break;
+					//retVal.add(new Datatype_Amos_Document_Upload(rowData));
+				}
+			}
+		}
+		
+		try{
+			return Integer.parseInt(retVal.getSEQ().toString()) +1 ;
+		}
+		catch(Exception ex){
+			
+			return 1 ;
+		}
+		
+		
+	}
+	
+	public int updateData(DataType_Amos_Document_Upload data) {
+		CreateOrUpdateStatus result;
+		int retVal = 0;
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				result = getAMOS_DOCUMENT_UPLOAD().createOrUpdate(data.toRowData());
+				retVal = result.getNumLinesChanged();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+		
+		return retVal;		
+	}
+	
+	public void deleteDocumentById(String id) throws Exception{
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			DeleteBuilder<AMOS_DOCUMENT_UPLOAD, String> deleteBuilder = null;
+			deleteBuilder = getAMOS_DOCUMENT_UPLOAD().deleteBuilder();
+			deleteBuilder.where().eq("ID", id);
+			deleteBuilder.delete();
+		}
+	}
+	
+	public void deleteDocumentByNoAplikasi(String nO) throws Exception{
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			DeleteBuilder<AMOS_DOCUMENT_UPLOAD, String> deleteBuilder = null;
+			deleteBuilder = getAMOS_DOCUMENT_UPLOAD().deleteBuilder();
+			deleteBuilder.where().eq("AP_REGNO", nO);
+			deleteBuilder.delete();
+		}
+	}
+	
+	public ArrayList<DataType_Amos_Document_Upload> getAllData_search_by_USERID(String uSERID) {
+		ArrayList<DataType_Amos_Document_Upload> retVal = new ArrayList<DataType_Amos_Document_Upload>();
+		List<AMOS_DOCUMENT_UPLOAD> qResult = null;
+		
+		if (isDaoAMOS_DOCUMENT_UPLOADExist()) {
+			try {
+				qResult = getAMOS_DOCUMENT_UPLOAD().queryBuilder().where().eq("USERID", uSERID).query();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (qResult != null) {
+				for (AMOS_DOCUMENT_UPLOAD rowData : qResult) {
+					//retVal=(new Datatype_Amos_Document_Upload(rowData));
+					
+					retVal.add(new DataType_Amos_Document_Upload(rowData));
+				}
+			}
+		}
+		
+		return retVal;
+	}
+
+}

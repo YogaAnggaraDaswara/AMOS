@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lbl_sm_calendar_view_day">#ffffff</color>
+    <color name="lbl_sm_calendar_view_date">#646363</color>
+    <color name="lbl_sm_calendar_view_month_year">#646363</color>
+    <color name="lbl_sm_calendar_dialog_date">#000000</color>
+    <color name="lbl_sm_calendar_dialog_date_disable">#646363</color>
+    <color name="lbl_sm_calendar_dialog_day">#000000</color>
+    <color name="lbl_sm_calendar_dialog_day_holiday">#f54141</color>
+    <color name="lbl_sm_calendar_dialog_month">#ffffff</color>
+    <color name="lbl_sm_calendar_dialog_year">#ffffff</color>
+</resources>

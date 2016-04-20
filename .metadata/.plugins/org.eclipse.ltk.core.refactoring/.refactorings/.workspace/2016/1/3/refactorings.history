@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 6 resources" deleteContents="false" description="Delete 6 resources" element1="/com.mobile.bo.app" element2="/com.mobile.database.app" element3="/com.mobile.framework" element4="/com.mobile.services.app" element5="/google-play-services_lib" element6="/maybank.mobile.amos" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="6" stamp="1452737017542"/>
+</session>

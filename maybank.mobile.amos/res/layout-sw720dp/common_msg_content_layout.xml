@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:id="@+id/common_msg_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp">
+
+        <LinearLayout
+            android:id="@+id/contentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/common_msg_view_lbl_totalrecords_value"
+                style="@style/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_dash"
+                android:layout_gravity="right" />
+
+            <TextView
+                android:id="@+id/common_msg_view_lbl_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_header_text_appearance"
+                android:text="@string/str_dash"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/common_msg_view_lbl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_1"
+                android:text="@string/str_dash"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/common_msg_content_container"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/common_msg_view_btn_prev"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_prev"
+            style="@style/button_text"
+            android:background="@color/color_blue_dark"
+            android:layout_gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/common_msg_view_btn_next"
+            android:layout_marginTop="2dp"
+            android:text="@string/form_action_next"
+            style="@style/button_text"
+            android:background="@color/color_blue_dark"
+            android:layout_gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/common_msg_view_btn_back"
+            android:layout_marginTop="2dp"
+            android:text="@string/str_back"
+            style="@style/button_text"
+            android:background="@color/color_blue_dark"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

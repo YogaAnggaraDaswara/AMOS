@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@color/color_bacground2">
+
+    <ScrollView
+        android:id="@+id/statistik_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="20dp">
+
+        <TableLayout
+            android:id="@+id/statistik_tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/statistik_content_container"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/statistik_content_view_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dash"
+            style="@style/label_header" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statistik_content_view_prospek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_activity_prospek"
+                    style="@style/label_1" />
+
+                <TextView
+                    android:id="@+id/statistik_content_view_kenalan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_activity_kenalan"
+                    style="@style/label_1" />
+
+                <TextView
+                    android:id="@+id/statistik_content_view_pendekatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_activity_pendekatan"
+                    style="@style/label_1" />
+
+                <TextView
+                    android:id="@+id/statistik_content_view_closing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_activity_closing"
+                    style="@style/label_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:id="@+id/statistik_content_view_prospek_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1" />
+
+                <TextView
+                    android:id="@+id/statistik_content_view_kenalan_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1" />
+
+                <TextView
+                    android:id="@+id/statistik_content_view_pendekatan_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1" />
+
+                <TextView
+                    android:id="@+id/statistik_content_view_closing_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dash"
+                    style="@style/label_1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

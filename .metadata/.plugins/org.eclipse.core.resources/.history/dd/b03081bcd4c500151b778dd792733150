@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideInset"
+	android:fadeScrollbars="true"
+	android:scrollbarSize="10dip"
+	android:fitsSystemWindows="true" >
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+				
+			    <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		            
+		            <TextView
+		                android:id="@+id/data_lbl_auto_dokumen"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/DOK" />
+		            
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		            
+		            <AutoCompleteTextView
+						android:id="@+id/val_txt_auto_dokumen"
+						style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.6"
+		                android:imeOptions="actionDone"
+		                android:inputType="text" />
+		            
+		            <EditText
+		                android:id="@+id/data_txt_id_dokumen"
+		                style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.6"
+		                android:imeOptions="actionDone"
+		                android:inputType="text" />
+		            
+			    </LinearLayout>
+				
+				<LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		            
+				    <EditText
+		                android:id="@+id/data_txt_seq"
+		                style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.6"
+		                android:imeOptions="actionDone"
+		                android:capitalize="characters"
+		                android:visibility="gone" />
+					
+					<EditText
+		                android:id="@+id/data_txt_id_dokumen"
+		                style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.6"
+		                android:imeOptions="actionDone"
+		                android:inputType="text"
+		                 android:visibility="gone" />
+					
+					<EditText
+		                android:id="@+id/data_txt_file_upload"
+		                style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.6"
+		                android:imeOptions="actionDone"
+		                android:inputType="text"
+						android:enabled="false" 
+						android:visibility="gone" />
+					<!-- visible -->
+					
+	            </LinearLayout>
+		        
+		        <LinearLayout
+		            android:id="@+id/dialog_update_dokumen"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_nama_dokumen"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/DOK" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		            
+					
+		            <EditText
+		                android:id="@+id/data_txt_nama_dokumen"
+		                style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="100dp"
+		                android:layout_weight="0.6"
+		                android:ems="10"
+		                android:imeOptions="actionDone"
+		                android:inputType="textMultiLine"
+		                android:capitalize="characters"
+		                android:enabled="false" />
+		            
+		        </LinearLayout>
+		        
+		        <LinearLayout
+		            android:id="@+id/dialog_new_dokumen"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_dokumen_code"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/DOK" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		            
+		            <com.mobile.framework.widget.ExSpinner
+		                android:id="@+id/data_spn_dokumen_code"
+		                style="@style/spinner_2"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.6"
+		                android:layout_height="wrap_content"
+		                android:prompt="@string/DOK" />
+					
+		            
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_no_dokumen"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/JAMNODOK" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		
+		            <EditText
+		                android:id="@+id/data_txt_no_dokumen"
+		                style="@style/edittext_2"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.6"
+		                android:ems="10"
+		                android:imeOptions="actionDone"
+		                android:inputType="text"
+		                android:capitalize="characters" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_doc_orig"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/JAMASLI" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		
+		            <LinearLayout
+		                android:id="@+id/data_linear_doc_oric"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.6"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal">
+		
+		                <RadioGroup
+		                    android:id="@+id/data_rdogroup_orig"
+		                    android:layout_height="wrap_content"
+		                    android:layout_width="wrap_content"
+		                    android:orientation="vertical">
+		
+			                <RadioButton
+			                    android:id="@+id/data_document_rdo_or_asli"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:text="@string/JAMASLI"
+		                        android:textColor="@android:color/black" />
+		
+			                <RadioButton
+			                    android:id="@+id/data_document_rdo_or_copy"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:text="@string/JAMCOPY"
+			                    android:textColor="@android:color/black" />
+		                
+		 				</RadioGroup>
+	
+		            </LinearLayout>
+		        </LinearLayout>
+		        
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_doc_avail"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/ADATIDAK" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		
+		            <LinearLayout
+		                android:id="@+id/data_linear_doc_avail"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.6"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal">
+		
+		                <RadioGroup
+		                    android:id="@+id/data_rdogroup_avail"
+		                    android:layout_height="wrap_content"
+		                    android:layout_width="wrap_content"
+		                    android:orientation="vertical">
+		
+			                <RadioButton
+			                    android:id="@+id/data_document_rdo_av_ya"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:text="@string/ADA"
+		                        android:textColor="@android:color/black" />
+		
+			                <RadioButton
+			                    android:id="@+id/data_document_rdo_av_tidak"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:text="@string/TIDAK"
+			                    android:textColor="@android:color/black" />
+		                
+		 				</RadioGroup>
+	
+		            </LinearLayout>
+		        </LinearLayout>
+		        
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_doc_valid"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/VALIDTIDAK" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		
+		            <LinearLayout
+		                android:id="@+id/data_linear_doc_valid"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.6"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal">
+		
+		                <RadioGroup
+		                    android:id="@+id/data_rdogroup_valid"
+		                    android:layout_height="wrap_content"
+		                    android:layout_width="wrap_content"
+		                    android:orientation="vertical">
+		
+			                <RadioButton
+			                    android:id="@+id/data_document_rdo_va_true"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:text="@string/VALID"
+		                        android:textColor="@android:color/black" />
+		
+			                <RadioButton
+			                    android:id="@+id/data_document_rdo_va_false"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:text="@string/TIDAK"
+			                    android:textColor="@android:color/black" />
+		                
+		 				</RadioGroup>
+	
+		            </LinearLayout>
+		        </LinearLayout>
+		        
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+		
+		            <TextView
+		                android:id="@+id/data_lbl_foto"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="@string/form_action_picture" />
+		
+		            <TextView
+		                android:layout_width="0dp"
+		                android:layout_weight="0.05"
+		                android:layout_height="wrap_content"
+		                android:gravity="center_horizontal"
+		                android:text=":"
+		                android:textColor="@android:color/black" />
+		
+		            <LinearLayout
+		                android:id="@+id/data_linear_doc_foto"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.6"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal">
+		
+		                <Button
+			            android:id="@+id/btn_takepicture"
+			            android:layout_marginTop="2dp"
+			            style="@style/button_text"
+			            android:background="@drawable/button_foto"
+			            android:layout_gravity="center"
+			            android:layout_width="45dp"
+			            android:layout_height="45dp"
+			            android:enabled="true"/>
+		         	
+			         <Button
+			            android:id="@+id/btn_takefile"
+			            android:layout_marginTop="2dp"
+			            style="@style/button_text"
+			            android:background="@drawable/folder"
+			            android:layout_gravity="center"
+			            android:layout_width="45dp"
+			            android:layout_height="45dp"
+			            android:enabled="true"/>
+			         
+			         <Button
+			            android:id="@+id/btn_imgPreview"
+			            android:layout_marginTop="2dp"
+			            style="@style/button_text"
+			            android:background="@drawable/button_dok"
+			            android:layout_gravity="center"
+			            android:layout_width="45dp"
+			            android:layout_height="45dp"
+			            android:enabled="true"/>
+	
+		            </LinearLayout>
+		        </LinearLayout>
+		        
+	         	<LinearLayout
+	         	    android:id="@+id/search_layout_action"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:background="@color/color_followup"
+		            android:layout_margin="0.5dp"
+		            android:padding="0.5dp">
+			         
+	         	    <TextView
+		                android:id="@+id/val_rtb_lbl_unit_nilai_likuidasi"
+		                android:layout_width="0dp"
+		                android:layout_weight="0.25"
+		                android:layout_height="wrap_content"
+		                style="@style/label_1"
+		                android:text="" />
+		
+					<Button
+		                android:id="@+id/btn_savedokumen"
+		                android:layout_marginTop="2dp"
+		                android:text="@string/form_action_save"
+		                style="@style/button_text_navigator_menu"
+		                android:layout_gravity="center"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:enabled="true" />
+					
+					<Button
+		                android:id="@+id/btn_cancel"
+		                android:layout_marginTop="2dp"
+		                android:text="@string/form_action_tutup"
+		                style="@style/button_text_navigator_menu"
+		                android:layout_gravity="center"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:enabled="true"  />
+		               <!--  android:visibility="gone" -->
+		        </LinearLayout>
+		        
+		    </LinearLayout>
+	  </ScrollView>
+</RelativeLayout>

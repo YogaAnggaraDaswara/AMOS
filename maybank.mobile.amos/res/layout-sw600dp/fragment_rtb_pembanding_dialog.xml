@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+	<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideInset"
+	android:fadeScrollbars="true"
+	android:scrollbarSize="10dip"
+	android:fitsSystemWindows="true" >
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+	      
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_merk"
+	                style="@style/label_1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0.35"
+	                android:text="@string/PEMTYPE" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<EditText
+	                android:id="@+id/val_rtb_txt_seq"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                android:visibility="gone"/>
+	            <EditText
+	                android:id="@+id/val_rtb_txt_type"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"/>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_lokasi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMLOKASI" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	 			<EditText
+	                android:id="@+id/val_rtb_txt_lokasi"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                 />
+	          
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_luas_tanah"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMLUASTANAH" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	          <EditText
+	                android:id="@+id/val_rtb_txt_luas_tanah"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                 />
+	        </LinearLayout>
+			 <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_luas_bangunan"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMLUASBANGUNAN" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	  			<EditText
+	                android:id="@+id/val_rtb_txt_luas_banunan"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                 />
+	            
+	        </LinearLayout>
+	
+	       <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_kondisi"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMKONDISI" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/val_rtb_txt_kodisi"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                 />
+	
+	        </LinearLayout>
+			<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_penawaran"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMPENAWARAN" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <com.mobile.framework.widget.ExSpinner
+	                android:id="@+id/val_rtb_spn_penawaran"
+	                style="@style/spinner_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/LAND_SHAPE" />
+	
+	
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_harga_penawaran"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMHARGA" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/val_rtb_txt_harga_penawaran"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                 />
+	
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_adjusment"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMADJUSMENT" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+	
+	            <EditText
+	                android:id="@+id/val_rtb_txt_adjusment"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="number"
+	                 />
+	
+	
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_nara_sumber"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMNARASUMBER" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+				<EditText
+	                android:id="@+id/val_rtb_txt_nara_sumber"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                 />
+	        </LinearLayout>
+			<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	
+	            <TextView
+	                android:id="@+id/val_rtb_lbl_no_telp"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.35"
+	                android:layout_height="wrap_content"
+	                style="@style/label_1"
+	                android:text="@string/PEMTELP" />
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_weight="0.05"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:text=":"
+	                android:textColor="@android:color/black" />
+				<EditText
+	                android:id="@+id/val_rtb_txt_no_telp"
+	                style="@style/edittext_2"
+	                android:layout_width="0dp"
+	                android:layout_weight="0.6"
+	                android:layout_height="wrap_content"
+	                android:imeOptions="actionDone"
+	                android:inputType="text"
+	                 />
+	         
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:background="@color/color_followup"
+	            android:layout_margin="0.5dp"
+	            android:padding="0.5dp">
+	 			<Button
+	                 android:id="@+id/btn_save"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:background="@drawable/button_nav"
+	                 android:text="@string/str_save" />
+	        </LinearLayout>
+		</LinearLayout>
+		</ScrollView>
+
+</RelativeLayout>
